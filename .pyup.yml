@@ -1,0 +1,5 @@
+update: all
+pin: True
+schedule: "every week"
+search: True
+close_prs: True
