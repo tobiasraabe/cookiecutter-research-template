@@ -25,7 +25,7 @@ dependencies:
     - pep8-naming==0.7.0
     - pybtex==0.21
     - pytest==3.6.4
-    - pytest-black==0.1.6
+    - pytest-black==0.1.7
     - pytest-cov==2.5.1
     - pytest-isort==0.2.0
     - pytest-pythonpath==0.7.2
