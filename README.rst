@@ -15,7 +15,7 @@ It is derived from https://github.com/hmgaudecker/econ-project-template and the
 authors of this project deserve all the credit for the implementation of Waf as
 a framework for reproducible research. My contribution in this project is to
 add several helpers around the project which are common in software engineering
-and should help researchers in writing better code.
+and should help researchers to write better code.
 
 
 Installation
@@ -135,13 +135,9 @@ Cleaning the project
     to actually delete the files.
 
 Others
-    - Waf Tricks and Tips
+    - `Waf Tips and Tricks <https://github.com/tobiasraabe/cookiecutter-research-
+      template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/WAF.rst>`_
     - Writing documentation with Jupyter notebooks (`nbsphinx
-      <https://github.com/spatialaudio/nbsphinx>`_ ).
+      <https://github.com/spatialaudio/nbsphinx>`_ )
     - Beautiful visualization of the project's DAG.
     - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.
-
-Todo
-====
-
-- Send solution to Gaudecker
