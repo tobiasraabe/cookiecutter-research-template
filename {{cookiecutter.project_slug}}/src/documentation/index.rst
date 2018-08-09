@@ -15,4 +15,5 @@
     library
     todos
     authors
+    history
     zreferences

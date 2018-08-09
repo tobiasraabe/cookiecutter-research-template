@@ -20,8 +20,8 @@ Getting started
 ===============
 
 **This assumes you have completed the steps in the** `README.md file
-<https://github.com/hmgaudecker/econ-project-templates/tree/python#templates-
-for-reproducible-research-projects-in-economics>`_ **and everything worked.**
+<https://github.com/hmgaudecker/econ-project-templates/blob/python/README.md>`_
+**and everything worked.**
 
 The logic of the project template works by step of the analysis:
 
