@@ -125,6 +125,7 @@ Cleaning the project
     to actually delete the files.
 
 Others
-    - Waf Tricks and Tips
+    - `Waf Tips and Tricks <https://github.com/tobiasraabe/cookiecutter-research-
+      template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/WAF.rst>`_
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
