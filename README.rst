@@ -2,8 +2,8 @@
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
 
 .. image:: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/shield.svg
-     :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
-     :alt: Updates
+    :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
+    :alt: Updates
 
 Introduction
 ============
@@ -123,6 +123,11 @@ Cleaning the project
         $ python clean.py --force
 
     to actually delete the files.
+
+Others
+    - Waf Tricks and Tips
+    - Writing documentation with Jupyter notebooks (`nbsphinx
+      <https://github.com/spatialaudio/nbsphinx>`_ )
 
 Todo
 ====

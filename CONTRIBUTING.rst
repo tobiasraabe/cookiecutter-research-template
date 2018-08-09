@@ -62,7 +62,7 @@ local development. Please note this documentation assumes you already have
 `virtualenv` and `Git` installed and ready to go.
 
 1. Fork the `cookiecutter-research-template` repo on GitHub.
-2. Clone your fork locally::
+2. Clone your fork locally:
 
   .. code-block:: bash
 
@@ -71,7 +71,7 @@ local development. Please note this documentation assumes you already have
 
 3. Assuming you have virtualenv installed (If you have Python3.5 this should
    already be there), you can create a new environment for your local
-   development by typing::
+   development by typing:
 
   .. code-block:: bash
 
@@ -81,7 +81,7 @@ local development. Please note this documentation assumes you already have
     This should change the shell to look something like
     (cookiecutter-research-template-env) $
 
-4. Create a branch for local development::
+4. Create a branch for local development:
 
   .. code-block:: bash
 
@@ -91,7 +91,7 @@ local development. Please note this documentation assumes you already have
 
 5. When you're done making changes, check that your changes pass flake8. Since,
    this package contains mostly templates the flake should be run for tests
-   directory::
+   directory:
 
   .. code-block:: bash
 
@@ -99,7 +99,7 @@ local development. Please note this documentation assumes you already have
 
 6. The next step would be to run the test cases.
    `cookiecutter-research-template` uses py.test, you can run PyTest. Before
-   you run pytest you should ensure all dependancies are installed::
+   you run pytest you should ensure all dependancies are installed:
 
   .. code-block:: bash
 
@@ -107,13 +107,13 @@ local development. Please note this documentation assumes you already have
     $ py.test ./tests
 
    If you get any errors while installing cryptography package (something like
-   #include <openssl/aes.h>). Please update your pip version and try again::
+   #include <openssl/aes.h>). Please update your pip version and try again:
 
     # Update pip
     $ pip install -U pip
 
 7. Before raising a pull request you should also run tox. This will run the
-   tests across different versions of Python::
+   tests across different versions of Python:
 
   .. code-block:: bash
 
@@ -126,7 +126,7 @@ local development. Please note this documentation assumes you already have
 8. If your contribution is a bug fix or new feature, you may want to add a test
    to the existing test suite. See section Add a New Test below for details.
 
-9. Commit your changes and push your branch to GitHub::
+9. Commit your changes and push your branch to GitHub:
 
   .. code-block:: bash
 
