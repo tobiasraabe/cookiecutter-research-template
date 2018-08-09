@@ -55,9 +55,9 @@
 
 \begin{document}
 
-\title{
+{% raw -%}\title{{%- endraw %}
     {{ cookiecutter.project_name }}
-    \thanks{
+    {% raw -%}\thanks{{%- endraw %}
         {{ cookiecutter.author }}: {{ cookiecutter.affiliation }},
         Address. \href{mailto:x@y.z} {\nolinkurl{x [at] y [dot] z}},
         tel.~+00000.}    % subtitle:
@@ -65,7 +65,7 @@
         % \large Subtitle here
 }
 
-\author{
+{% raw -%}\author{{%- endraw %}
     {{ cookiecutter.author }}
     % \\[1ex]
     % Additional authors here
