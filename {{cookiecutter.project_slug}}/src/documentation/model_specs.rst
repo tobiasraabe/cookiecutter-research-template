@@ -15,6 +15,6 @@ pass ``[model_name]`` to your code using the ``append`` keyword of the
 
  .. [#] Stata is the only execption I know of. You find a  converter in the
     wscript file of the Stata branch. Note that there is `insheetjson
-    <http://ideas.repec.org/c/boc/bocode/s457407.html>`_, but that will read a
+    <https://ideas.repec.org/c/boc/bocode/s457407.html>`_, but that will read a
     JSON file into the data set rather than into macros, which is what we need
     here.
