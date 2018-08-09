@@ -3,6 +3,13 @@
 
 def build(ctx):
 
+    ctx(
+        features='subst',
+        source=ctx.path_to(ctx, 'IN_FIGURES', 'matplotlibrc'),
+        target=ctx.path_to(ctx, 'BLD', 'matplotlibrc'),
+        is_copy=True,
+    )
+
     for model in 'baseline', 'max_moves_2':
 
         ctx(

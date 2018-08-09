@@ -10,3 +10,9 @@ def build(ctx):
     ctx.add_group()
     ctx.recurse('paper')
     ctx.recurse('documentation')
+
+    from src.figures.project_dependency_graph import (
+        make_project_dependency_graph
+    )
+
+    ctx.add_pre_fun(make_project_dependency_graph)

@@ -96,6 +96,16 @@ Linting
 
         $ tox -e sphinx
 
+Customizing matplotlib
+    If you are tired to set the same old options like ``figsize=(12, 8)`` for
+    every graph, you are lucky. There is a solution called ``matplotlibrc``.
+    This is a configuration file for matplotlib which lets you define the
+    defaults. The file resides in ``src/figures/matplotlibrc`` and is copied
+    over to ``bld`` as this is the root directory of the Python interpreter
+    running your project. The ``matplotlibrc`` and its settings are
+    automatically picked up. (`More information
+    <https://matplotlib.org/users/customizing.html>`_.)
+
 Downloading data for the project
     Data cannot be committed with the repository on Github because of
     confidentiality or because the files are to big.
@@ -127,7 +137,9 @@ Cleaning the project
 Others
     - Waf Tricks and Tips
     - Writing documentation with Jupyter notebooks (`nbsphinx
-      <https://github.com/spatialaudio/nbsphinx>`_ )
+      <https://github.com/spatialaudio/nbsphinx>`_ ).
+    - Beautiful visualization of the project's DAG.
+    - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.
 
 Todo
 ====
