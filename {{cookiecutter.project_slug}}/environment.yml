@@ -6,6 +6,9 @@ dependencies:
   - python={{ cookiecutter.python_version }}
   - python-graphviz=0.8.2
   - pip:
+{% if cookiecutter.add_formatter == 'y' %}
+    - black==18.6b4
+{% endif %}
     - click==6.7
 {% if cookiecutter.add_tox == 'y' %}
     - doc8==0.8.0
@@ -21,6 +24,9 @@ dependencies:
     - flake8-quotes==1.0.0
     - flake8-todo==0.7
 {% endif %}
+{% if cookiecutter.add_formatter == 'y' %}
+    - isort==4.3.4
+{% endif %}
     - matplotlib==2.2.2
     - nbsphinx==0.3.3
 {% if cookiecutter.add_tox == 'y' %}
@@ -28,13 +34,7 @@ dependencies:
     - pybtex==0.21
 {% endif %}
     - pytest==3.7.1
-{% if cookiecutter.add_formatter == 'y' %}
-    - pytest-black==0.1.7
-{% endif %}
     - pytest-cov==2.5.1
-{% if cookiecutter.add_formatter == 'y' %}
-    - pytest-isort==0.2.0
-{% endif %}
     - pytest-pythonpath==0.7.2
     - sphinx==1.7.6
     - sphinx-rtd-theme==0.4.1
