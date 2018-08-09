@@ -12,11 +12,13 @@ def cli(force):
     run by default. Use the `force` flag if you are really sure about removing
     files.
 
+    Use the ``-e`` flag to exclude files.
+
     """
     if force:
-        os.system('git clean -f -x -d -e *.dta -e *.pkl* src')
+        os.system('git clean -f -x -d -e *.dta src')
     else:
-        os.system('git clean -n -x -d -e *.dta -e *.pkl* src')
+        os.system('git clean -n -x -d -e *.dta src')
 
 
 if __name__ == '__main__':

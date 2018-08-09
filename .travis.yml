@@ -1,26 +1,24 @@
+# Configuration file for automatic testing at travis-ci.org
 
-# Configure notification
+# Configure notifications
 notifications:
   email:
     on_success: never
     on_failure: never
 
+# Configure supported Python versions
 language: python
+python:
+  - 3.4
+  - 3.5
+  - 3.6
 
-python: 3.6
+# Command to install dependencies, e.g. pip install -r requirements.txt
+# --use-mirrors
+install: pip install -U tox-travis
 
-before_install:
-  - sudo apt-get -qq update
-  - wget https://github.com/jgm/pandoc/releases/download/2.1.3/pandoc-2.1.3-1-amd64.deb -O $HOME/pandoc.deb
-  - sudo dpkg -i $HOME/pandoc.deb
-
-install:
-  - pip install -U tox
-
-script:
-  - tox -e flake8
-  - tox -e docs
-  - tox -e sphinx
+# Command to run tests, e.g. python setup.py test
+script: tox
 
 # We only want to build with Travis when pushing to master or PR:
 # https://stackoverflow.com/questions/31882306/how-to-configure-travis-ci-to-

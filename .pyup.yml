@@ -2,5 +2,6 @@ update: all
 pin: True
 schedule: "every week"
 requirements:
-  - environment.yml
+  - requirements.txt
+  - {{cookiecutter.project_slug}}/environment.yml
 close_prs: True

@@ -17,7 +17,7 @@ The keys of the dictionary are the file names on the disk. The values are a
 list containing urls in the first and file hashes in the second position.
 
 The has can be computed in Powershell with ``Get-FileHash <file>``. Notice
-that Powershell returns uppercase letters and Python lowercase.
+that Powershell returns uppercase letters and Python uses lowercase.
 
 """
 
