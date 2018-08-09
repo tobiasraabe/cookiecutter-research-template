@@ -24,13 +24,13 @@ dependencies:
     - nbsphinx==0.3.3
     - pep8-naming==0.7.0
     - pybtex==0.21
-    - pytest==3.6.3
-    - pytest-black==0.1.6
+    - pytest==3.7.1
+    - pytest-black==0.1.7
     - pytest-cov==2.5.1
     - pytest-isort==0.2.0
     - pytest-pythonpath==0.7.2
     - sphinx==1.7.6
-    - sphinx-rtd-theme==0.4.0
+    - sphinx-rtd-theme==0.4.1
     - sphinxcontrib-bibtex==0.4.0
     - tqdm==4.24.0
-    - tox==3.1.2
+    - tox==3.1.3
