@@ -1,5 +1,5 @@
 {{ cookiecutter.project_name }} Documentation
-{{ '=' for _ in cookiecutter.project_name + ' Documentation' }}
+{% for _ in cookiecutter.project_name + ' Documentation' %}={% endfor %}
 
 .. toctree::
     :maxdepth: 2
