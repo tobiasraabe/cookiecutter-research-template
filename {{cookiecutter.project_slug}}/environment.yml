@@ -27,9 +27,9 @@ dependencies:
     - pep8-naming==0.7.0
     - pybtex==0.21
 {% endif %}
-    - pytest==3.6.3
+    - pytest==3.7.1
 {% if cookiecutter.add_formatter == 'y' %}
-    - pytest-black==0.1.6
+    - pytest-black==0.1.7
 {% endif %}
     - pytest-cov==2.5.1
 {% if cookiecutter.add_formatter == 'y' %}
@@ -37,11 +37,11 @@ dependencies:
 {% endif %}
     - pytest-pythonpath==0.7.2
     - sphinx==1.7.6
-    - sphinx-rtd-theme==0.4.0
+    - sphinx-rtd-theme==0.4.1
     - sphinxcontrib-bibtex==0.4.0
 {% if cookiecutter.add_downloader == 'y' %}
     - tqdm==4.24.0
 {% endif %}
 {% if cookiecutter.add_tox == 'y' %}
-    - tox==3.1.2
+    - tox==3.1.3
 {% endif %}
