@@ -26,20 +26,20 @@ def setup_agents(model):
     """
 
     initial_locations = np.loadtxt(
-        ppj("OUT_DATA", "initial_locations.csv"), delimiter=","
+        ppj('OUT_DATA', 'initial_locations.csv'), delimiter=','
     )
-    initial_locations = initial_locations.reshape(2, model["n_types"], 30000)
+    initial_locations = initial_locations.reshape(2, model['n_types'], 30000)
 
     agents = []
-    for typ in range(model["n_types"]):
-        for i in range(model["n_agents_by_type"][typ]):
+    for typ in range(model['n_types']):
+        for i in range(model['n_agents_by_type'][typ]):
             agents.append(
                 Agent(
                     typ=typ,
                     initial_location=initial_locations[typ, :, i],
-                    n_neighbours=model["n_neighbours"],
-                    require_same_type=model["require_same_type"],
-                    max_moves=model["max_moves"],
+                    n_neighbours=model['n_neighbours'],
+                    require_same_type=model['require_same_type'],
+                    max_moves=model['max_moves'],
                 )
             )
 
@@ -49,8 +49,8 @@ def setup_agents(model):
 def _get_locations_by_round_dict(model):
     """Return a dictionary with arrays to store locations for each type."""
     return {
-        typ: np.zeros((model["n_agents_by_type"][typ], 2)) * np.nan
-        for typ in range(model["n_types"])
+        typ: np.zeros((model['n_agents_by_type'][typ], 2)) * np.nan
+        for typ in range(model['n_types'])
     }
 
 
@@ -77,8 +77,8 @@ def run_analysis(agents, model):
     locations_by_round = [_get_locations_by_round_dict(model)]
     _store_locations_by_round(locations_by_round[-1], agents)
 
-    for loop_counter in range(model["max_iterations"]):
-        logging.info("Entering loop {}".format(loop_counter))
+    for loop_counter in range(model['max_iterations']):
+        logging.info('Entering loop {}'.format(loop_counter))
         # Make room for locations.
         locations_by_round.append(_get_locations_by_round_dict(model))
         # Update locations as necessary
@@ -96,29 +96,29 @@ def run_analysis(agents, model):
 
     if someone_moved:
         logging.info(
-            "No convergence achieved after {} iterations".format(
-                model["max_iterations"]
+            'No convergence achieved after {} iterations'.format(
+                model['max_iterations']
             )
         )
 
     return locations_by_round
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     model_name = sys.argv[1]
     model = json.load(
-        open(ppj("IN_MODEL_SPECS", model_name + ".json"), encoding="utf-8")
+        open(ppj('IN_MODEL_SPECS', model_name + '.json'), encoding='utf-8')
     )
 
     logging.basicConfig(
         filename=ppj(
-            "OUT_ANALYSIS", "log", "schelling_{}.log".format(model_name)
+            'OUT_ANALYSIS', 'log', 'schelling_{}.log'.format(model_name)
         ),
-        filemode="w",
+        filemode='w',
         level=logging.INFO,
     )
-    np.random.seed(model["rng_seed"])
-    logging.info(model["rng_seed"])
+    np.random.seed(model['rng_seed'])
+    logging.info(model['rng_seed'])
 
     # Load initial locations and setup agents
     agents = setup_agents(model)
@@ -126,6 +126,6 @@ if __name__ == "__main__":
     locations_by_round = run_analysis(agents, model)
     # Store list with locations after each round
     with open(
-        ppj("OUT_ANALYSIS", "schelling_{}.pickle".format(model_name)), "wb"
+        ppj('OUT_ANALYSIS', 'schelling_{}.pickle'.format(model_name)), 'wb'
     ) as out_file:
         pickle.dump(locations_by_round, out_file)

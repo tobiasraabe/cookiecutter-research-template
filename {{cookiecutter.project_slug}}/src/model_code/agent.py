@@ -30,8 +30,10 @@ class Agent:
         return np.linalg.norm(self.location - other.location)
 
     def _happy(self, agents):
-        """True if sufficient number of nearest neighbours are of the same type."""
-        # Create a sorted list of pairs (d, agent), where d is distance from self
+        """True if sufficient number of nearest neighbours are of the same
+        type."""
+        # Create a sorted list of pairs (d, agent), where d is distance from
+        # self
         distances = [
             (self._get_distance(other), other)
             for other in agents

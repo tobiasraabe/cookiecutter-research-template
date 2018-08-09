@@ -12,7 +12,8 @@ exclude = '''
 /(
     \.git
   | \.tox
-  | {{cookiecutter.project_slug}}/\.mywaflib
+  | \.mywaflib
   | \.pytest_cache
 )/
 '''
+verbose = true
