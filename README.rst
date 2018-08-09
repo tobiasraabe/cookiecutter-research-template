@@ -15,7 +15,7 @@ It is derived from https://github.com/hmgaudecker/econ-project-template and the
 authors of this project deserve all the credit for the implementation of Waf as
 a framework for reproducible research. My contribution in this project is to
 add several helpers around the project which are common in software engineering
-and should help researchers in writing better code.
+and should help researchers to write better code.
 
 
 Installation
@@ -128,8 +128,3 @@ Others
     - Waf Tricks and Tips
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
-
-Todo
-====
-
-- Send solution to Gaudecker
