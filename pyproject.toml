@@ -12,10 +12,7 @@ exclude = '''
 /(
     \.git
   | \.tox
-  | \.idea
-  | \.cache
-  | \.mywaflib
+  | {{cookiecutter.project_slug}}/\.mywaflib
   | \.pytest_cache
-  | bld
 )/
 '''
