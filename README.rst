@@ -8,8 +8,8 @@
 Introduction
 ============
 
-This repository lays out the structure for a research project based on the Waf
-framework.
+This repository lays out the structure for a reproducible research project
+based on the Waf framework.
 
 It is derived from https://github.com/hmgaudecker/econ-project-template and the
 authors of this project deserve all the credit for the implementation of Waf as

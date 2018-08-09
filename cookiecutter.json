@@ -8,7 +8,7 @@
   "project_short_description": "Template for reproducible research.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
-  "python_version": "3.6.6"
+  "python_version": "3.6.6",
   "add_cleaner": "y",
   "add_debugger": "y",
   "add_downloader": "y",
@@ -20,5 +20,5 @@
   "add_travis": "y",
   "create_author_file": "y",
   "create_history_file": "y",
-  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
 }
