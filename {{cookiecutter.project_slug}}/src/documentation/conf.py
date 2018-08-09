@@ -47,7 +47,7 @@ master_doc = "index"
 
 # General information about the project.
 project = u"{{ cookiecutter.project_name }}"
-copyright = u"2013-, {{ cookiecutter.authors }}"
+copyright = u"2013-, {{ cookiecutter.author }}"
 
 # The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -186,15 +186,15 @@ latex_elements = {
     # "preamble": "",
 }
 
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title, author, documentclass [howto/manual]).
-# Usually the list will only consist of one tuple for the master file.
+# Grouping the document tree into LaTeX files. List of tuples (source start
+# file, target name, title, author, documentclass [howto/manual]). Usually the
+# list will only consist of one tuple for the master file.
 latex_documents = [
     (
         "index",
         "project_documentation.tex",
-        "Documentation of the {{ cookiecutter.project_name }} project",
-        "{{ cookiecutter.authors }}",
+        "Documentation of {{ cookiecutter.project_name }}",
+        "{{ cookiecutter.author }}",
         "manual",
     )
 ]
