@@ -134,10 +134,20 @@ Cleaning the project
 
     to actually delete the files.
 
+Visualization of the DAG
+    A graphic of the DAG is compiled at the end of the build process and serves
+    just as a nice picture of the complexity of the project or allows for
+    visual debugging.
+
+    .. raw:: html
+
+        <p align="center">
+            <img src="_static/dag.png">
+        </p>
+
 Others
     - `Waf Tips and Tricks <https://github.com/tobiasraabe/cookiecutter-research-
       template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/WAF.rst>`_
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
-    - Beautiful visualization of the project's DAG.
     - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.

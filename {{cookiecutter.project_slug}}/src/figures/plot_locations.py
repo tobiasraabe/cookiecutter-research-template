@@ -27,8 +27,8 @@ def plot_locations(locations_by_round, model_name):
             break
         locs = locations_by_round[n_cycle]
         ax.set_title('Cycle {}'.format(n_cycle))
-        ax.tick_params(labelbottom='off', labelleft='off')
-        ax.set_axis_bgcolor('azure')
+        ax.tick_params(labelbottom=False, labelleft=False)
+        ax.set_facecolor('azure')
         ax.plot(
             locs[0][:, 0],
             locs[0][:, 1],

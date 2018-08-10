@@ -16,6 +16,7 @@ def build(ctx):
             features='run_py_script',
             source='plot_locations.py',
             deps=[
+                ctx.path_to('BLD', 'matplotlibrc'),
                 ctx.path_to(
                     ctx, 'OUT_ANALYSIS', 'schelling_{}.pickle'.format(model)
                 ),

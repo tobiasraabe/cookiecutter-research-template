@@ -46,6 +46,7 @@ class Agent:
         ]
         # Count how many neighbours have the same type as self
         n_same_type = sum(self.type == nt for nt in neighbour_types)
+
         return n_same_type >= self._require_same_type
 
     def move_until_happy(self, agents):
