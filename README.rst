@@ -13,9 +13,9 @@ based on the Waf framework.
 
 It is derived from https://github.com/hmgaudecker/econ-project-template and the
 authors of this project deserve all the credit for the implementation of Waf as
-a framework for reproducible research. My contribution in this project is to
-add several helpers around the project which are common in software engineering
-and should help researchers to write better code.
+a framework for reproducible research. My contribution is to add several
+helpers around the project which are common in software engineering and should
+help researchers to write better code.
 
 
 Installation
@@ -35,8 +35,9 @@ typing
 
     $ cookiecutter https://github.com/tobiasraabe/cookiecutter-research-template.git
 
-Answer all the questions and a folder with your research template is created.
-Rename the folder to your liking and initialize a repo within. Happy research!
+Answer all the prompts and a folder ``cookiecutter-research-template`` is
+created in your current directory. Rename the folder initialize a repository.
+Happy research!
 
 
 Features
@@ -44,7 +45,7 @@ Features
 
 The template offers several features:
 
-Automatic dependency update with `pyup <https://pyup.io>`_
+Automatic dependency updates with `pyup <https://pyup.io>`_
     Connect your Github repository with pyup.io and you get automatic PRs if
     one of your dependency is outdated.
 
@@ -72,11 +73,11 @@ Code Formatting with `black <https://github.com/ambv/black>`_ and `isort <https:
 
 Linting
     Linting is the process of checking the syntax in code or documentation
-    files for errors. This template offers three ways to lint your project.
+    files. This template offers three ways to lint your project.
 
     ``flake8`` and its extensions check your Python files for potential errors,
-    violations of naming conventions, warn of ``TODO`` directives, etc.. Run
-    the tests with
+    violations of naming conventions, ``TODO`` directives, etc.. Run this
+    selection of tests by using the ``-e`` flag and type
 
     .. code-block:: bash
 
@@ -98,24 +99,26 @@ Linting
 
 Customizing matplotlib
     If you are tired to set the same old options like ``figsize=(12, 8)`` for
-    every graph, you are lucky. There is a solution called ``matplotlibrc``.
-    This is a configuration file for matplotlib which lets you define the
-    defaults. The file resides in ``src/figures/matplotlibrc`` and is copied
-    over to ``bld`` as this is the root directory of the Python interpreter
-    running your project. The ``matplotlibrc`` and its settings are
-    automatically picked up. (`More information
-    <https://matplotlib.org/users/customizing.html>`_.)
+    every graph, you are lucky. There is a solution called ``matplotlibrc``
+    (`predefined template <https://github.com/tobiasraabe/cookiecutter-
+    research-template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/src/
+    figures/matplotlibrc>`_). This is a configuration file for matplotlib which
+    lets you define the your personal defaults. The file resides in
+    ``src/figures/matplotlibrc`` and is copied over to ``bld`` as this is the
+    root directory of the Python interpreter running your project. The
+    ``matplotlibrc`` and its settings are automatically picked up. (`More
+    information <https://matplotlib.org/users/customizing.html>`_.)
 
 Downloading data for the project
-    Data cannot be committed with the repository on Github because of
-    confidentiality or because the files are to big.
-    ``prepare_data_for_project.py`` offers a way to download files, resume
-    downloads and validate downloaded files. Add the file to ``FILES`` with the
-    filename on the disk as the key and the url as the first element of the
-    list and the hash value as the second. Hashes are needed to validate that
-    the downloaded file is identical the source. This seems unnecessary and
-    nit-picky, but it takes ages to recognize that your source files changed
-    when you are debugging your project and look for usual mistakes.
+    Data cannot be committed to the repository because the files are big and
+    changing or because of confidentiality. ``prepare_data_for_project.py``
+    offers a way to download files, resume downloads and validate downloaded
+    files. Add the file to ``FILES`` with the filename on the disk as the key
+    and the url as the first element of the list and the hash value as the
+    second. Hashes are needed to validate that the downloaded file is identical
+    the source. This seems unnecessarily nit-picky, but it takes ages to
+    recognize that your source files are corrupt when you are debugging your
+    project and look for typical mistakes.
 
 Cleaning the project
     ``clean.py`` offers a way to clean your project from artifacts and unused
@@ -146,8 +149,9 @@ Visualization of the DAG
         </p>
 
 Others
-    - `Waf Tips and Tricks <https://github.com/tobiasraabe/cookiecutter-research-
-      template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/WAF.rst>`_
+    - `Waf Tips and Trick <https://github.com/tobiasraabe/cookiecutter-
+      research-template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/
+      WAF.rst>`_
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
     - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.
