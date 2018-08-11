@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 import os
 import sys
 
-VERSION = "2.0.8"
+VERSION = '2.0.8'
 cwd = os.getcwd()
 join = os.path.join
 

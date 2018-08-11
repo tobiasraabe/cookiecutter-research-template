@@ -1,6 +1,3 @@
-#! python
-
-
 def build(ctx):
     ctx.recurse('data_management')
     ctx.recurse('analysis')
@@ -12,7 +9,7 @@ def build(ctx):
     ctx.recurse('documentation')
 
     from src.figures.project_dependency_graph import (
-        make_project_dependency_graph
+        make_project_dependency_graph,
     )
 
     ctx.add_post_fun(make_project_dependency_graph)
