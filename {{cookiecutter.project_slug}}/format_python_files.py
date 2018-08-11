@@ -12,11 +12,11 @@ def cli():
 
     """
     click.echo('Start reformatting files with isort.')
-    os.system('isort . -rc -sp tox.ini')
+    os.system('isort . -rc')
     click.echo('Start reformatting files with black.')
     os.system('black .')
     click.echo('Start reformatting files with isort again for commas.')
-    os.system('isort . -rc -sp tox.ini')
+    os.system('isort . -rc')
     click.echo('End reformatting files.')
 
 
