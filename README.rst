@@ -5,6 +5,11 @@
     :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
     :alt: Updates
 
+.. image:: https://readthedocs.org/projects/cookiecutter-research-template/badge/?version=latest
+    :target: https://cookiecutter-research-template.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+
 Introduction
 ============
 
