@@ -1,3 +1,12 @@
+.. raw:: html
+
+    | <b><a href="https://github.com/tobiasraabe/cookiecutter-research-template#installation">Installation</a></b>
+    | <b><a href="https://github.com/tobiasraabe/cookiecutter-research-template#features">Features</a></b>
+    | <b><a href="https://cookiecutter-research-template.readthedocs.io/en/latest/index.html">Documentation</a></b>
+    | 
+
+    <h1>cookiecutter-research-template</h1>
+
 .. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
 
@@ -11,7 +20,7 @@
 
 
 Introduction
-============
+------------
 
 This repository lays out the structure for a reproducible research project
 based on the Waf framework.
@@ -24,7 +33,7 @@ help researchers to write better code.
 
 
 Installation
-============
+------------
 
 This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template.
 To use it, you need to install ``cookiecutter`` by running
@@ -46,7 +55,7 @@ Happy research!
 
 
 Features
-========
+--------
 
 The template offers several features:
 
