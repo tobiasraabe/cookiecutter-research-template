@@ -40,7 +40,8 @@ Travis-CI configuration of this template.
 - ``language`` defines the main language of your project. Depending on this
   choice, there are several other tools pre-installed.
 - ``python`` sets the Python version of your test environment. The default is
-  3.6, but you are free to change. Furthermore, you can test your project against multiple python versions by using:
+  3.6, but you are free to change. Furthermore, you can test your project
+  against multiple python versions by using:
 
   .. code-block:: yaml
 

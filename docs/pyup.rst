@@ -11,7 +11,8 @@ Installation
 ------------
 
 Just go to https://pyup.io/ and choose login via Github in the upper right
-corner of the website. You will be redirected to Github to allow the service to read your repositories, etc..
+corner of the website. You will be redirected to Github to allow the service to
+read your repositories, etc..
 
 After that, when logged in on pyup.io, choose add repository in the upper right
 corner to add your repository. You are asked about how you would like to
