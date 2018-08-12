@@ -6,40 +6,40 @@ import graphviz as gv
 
 from waflib import Utils
 
-graph = functools.partial(gv.Graph, format='png')
-digraph = functools.partial(gv.Digraph, format='png')
+graph = functools.partial(gv.Graph, format="png")
+digraph = functools.partial(gv.Digraph, format="png")
 
 styles = {
-    'graph': {
-        'label': 'DAG of Project',
-        'fontsize': '48',
-        'fontcolor': 'white',
-        'bgcolor': '#333333',
-        'rankdir': 'LR',
+    "graph": {
+        "label": "DAG of Project",
+        "fontsize": "48",
+        "fontcolor": "white",
+        "bgcolor": "#333333",
+        "rankdir": "LR",
     },
-    'nodes': {
-        'fontname': 'Helvetica',
-        'shape': 'hexagon',
-        'fontcolor': 'white',
-        'color': 'white',
-        'style': 'filled',
-        'fillcolor': '#006699',
+    "nodes": {
+        "fontname": "Helvetica",
+        "shape": "hexagon",
+        "fontcolor": "white",
+        "color": "white",
+        "style": "filled",
+        "fillcolor": "#006699",
     },
-    'edges': {
-        'style': 'dashed',
-        'color': 'white',
-        'arrowhead': 'open',
-        'fontname': 'Courier',
-        'fontsize': '12',
-        'fontcolor': 'white',
+    "edges": {
+        "style": "dashed",
+        "color": "white",
+        "arrowhead": "open",
+        "fontname": "Courier",
+        "fontsize": "12",
+        "fontcolor": "white",
     },
 }
 
 
 def apply_styles(graph, styles):
-    graph.graph_attr.update(('graph' in styles and styles['graph']) or {})
-    graph.node_attr.update(('nodes' in styles and styles['nodes']) or {})
-    graph.edge_attr.update(('edges' in styles and styles['edges']) or {})
+    graph.graph_attr.update(("graph" in styles and styles["graph"]) or {})
+    graph.node_attr.update(("nodes" in styles and styles["nodes"]) or {})
+    graph.edge_attr.update(("edges" in styles and styles["edges"]) or {})
     return graph
 
 
@@ -76,14 +76,14 @@ def make_dot_file(ctx):
 
             add_nodes(dag, [name])
             # Add dependencies
-            deps = Utils.to_list(getattr(taskgen, 'deps', []))
+            deps = Utils.to_list(getattr(taskgen, "deps", []))
             for dep in deps:
                 dep = Path(dep).name
                 add_nodes(dag, [dep])
                 add_edges(dag, [(dep, name)])
 
             # Write targets
-            targets = Utils.to_list(getattr(taskgen, 'target', []))
+            targets = Utils.to_list(getattr(taskgen, "target", []))
             for target in targets:
                 target = Path(target).name
                 add_nodes(dag, [target])
@@ -92,7 +92,7 @@ def make_dot_file(ctx):
     dag = apply_styles(dag, styles)
 
     # Save DAG
-    dag.render(ppj('OUT_FIGURES', 'dag'))
+    dag.render(ppj("OUT_FIGURES", "dag"))
 
 
 def make_project_dependency_graph(ctx):

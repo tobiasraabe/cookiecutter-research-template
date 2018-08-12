@@ -7,7 +7,7 @@ import numpy as np
 
 from bld.project_paths import project_paths_join as ppj
 
-PLOT_ARGS = {'markersize': 4, 'alpha': 0.6}
+PLOT_ARGS = {"markersize": 4, "alpha": 0.6}
 
 
 def plot_locations(locations_by_round, model_name):
@@ -26,36 +26,36 @@ def plot_locations(locations_by_round, model_name):
             fig.delaxes(ax)
             break
         locs = locations_by_round[n_cycle]
-        ax.set_title('Cycle {}'.format(n_cycle))
+        ax.set_title("Cycle {}".format(n_cycle))
         ax.tick_params(labelbottom=False, labelleft=False)
-        ax.set_facecolor('azure')
+        ax.set_facecolor("azure")
         ax.plot(
             locs[0][:, 0],
             locs[0][:, 1],
-            'o',
-            markerfacecolor='orange',
+            "o",
+            markerfacecolor="orange",
             **PLOT_ARGS,
         )
         ax.plot(
             locs[1][:, 0],
             locs[1][:, 1],
-            'o',
-            markerfacecolor='green',
+            "o",
+            markerfacecolor="green",
             **PLOT_ARGS,
         )
 
-    fig.savefig(ppj('OUT_FIGURES', 'schelling_{}.png'.format(model_name)))
+    fig.savefig(ppj("OUT_FIGURES", "schelling_{}.png".format(model_name)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     model_name = sys.argv[1]
     model = json.load(
-        open(ppj('IN_MODEL_SPECS', model_name + '.json'), encoding='utf-8')
+        open(ppj("IN_MODEL_SPECS", model_name + ".json"), encoding="utf-8")
     )
 
     # Load locations after each round
     with open(
-        ppj('OUT_ANALYSIS', 'schelling_{}.pickle'.format(model_name)), 'rb'
+        ppj("OUT_ANALYSIS", "schelling_{}.pickle".format(model_name)), "rb"
     ) as in_file:
         locations_by_round = pickle.load(in_file)
 

@@ -20,4 +20,7 @@ pytest-cookies>=0.3.0
 pytest-cov>=2.5.1
 pytest-isort>=0.2.0
 pytest-pythonpath>=0.7.2
+sphinx>=1.7.6
+sphinx-autobuild>=0.7.1
+sphinx-rtd-theme>=0.4.1
 tox>=3.1.2

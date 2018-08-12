@@ -8,7 +8,7 @@ import requests
 
 from tqdm import tqdm
 
-CONTEXT_SETTINGS = {'help_option_names': ['-h', '--help']}
+CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 
 FILES: Dict[str, List[str]] = {}
 """Dict[str, List[str]]: Contains file information.
@@ -21,7 +21,7 @@ that Powershell returns uppercase letters and Python uses lowercase.
 
 """
 
-DOWNLOAD_FOLDER = Path('src', 'data', 'downloaded')
+DOWNLOAD_FOLDER = Path("src", "data", "downloaded")
 
 
 def downloader(file: Path, url: str, resume_byte_pos: int = None):
@@ -39,12 +39,12 @@ def downloader(file: Path, url: str, resume_byte_pos: int = None):
     """
     # Get size of file
     r = requests.head(url)
-    file_size = int(r.headers.get('content-length', 0))
+    file_size = int(r.headers.get("content-length", 0))
 
     # Append information to resume download at specific byte position
     # to header
     resume_header = (
-        {'Range': f'bytes={resume_byte_pos}-'} if resume_byte_pos else None
+        {"Range": f"bytes={resume_byte_pos}-"} if resume_byte_pos else None
     )
 
     # Establish connection
@@ -53,12 +53,12 @@ def downloader(file: Path, url: str, resume_byte_pos: int = None):
     # Set configuration
     block_size = 1024
     initial_pos = resume_byte_pos if resume_byte_pos else 0
-    mode = 'ab' if resume_byte_pos else 'wb'
+    mode = "ab" if resume_byte_pos else "wb"
 
     with open(file, mode) as f:
         with tqdm(
             total=file_size,
-            unit='B',
+            unit="B",
             unit_scale=True,
             unit_divisor=1024,
             desc=file.name,
@@ -89,20 +89,20 @@ def download_file(filename: str, url: str):
     r = requests.head(url)
 
     # Get filesize of online and offline file
-    file_size_online = int(r.headers.get('content-length', 0))
+    file_size_online = int(r.headers.get("content-length", 0))
     file = DOWNLOAD_FOLDER / filename
 
     if file.exists():
         file_size_offline = file.stat().st_size
 
         if file_size_online != file_size_offline:
-            click.echo(f'File {file} is incomplete. Resume download.')
+            click.echo(f"File {file} is incomplete. Resume download.")
             downloader(file, url, file_size_offline)
         else:
-            click.echo(f'File {file} is complete. Skip download.')
+            click.echo(f"File {file} is complete. Skip download.")
             pass
     else:
-        click.echo(f'File {file} does not exist. Start download.')
+        click.echo(f"File {file} does not exist. Start download.")
         downloader(file, url)
 
 
@@ -121,13 +121,13 @@ def validate_file(filename: str, hash_value: str = None):
 
     """
     if not hash_value:
-        click.echo(f'File {filename} has no hash.')
+        click.echo(f"File {filename} has no hash.")
         return 0
 
     file = DOWNLOAD_FOLDER / filename
 
     sha = hashlib.sha256()
-    with open(file, 'rb') as f:
+    with open(file, "rb") as f:
         while True:
             chunk = f.read(1000 * 1000)  # 1MB so that memory is not exhausted
             if not chunk:
@@ -137,11 +137,11 @@ def validate_file(filename: str, hash_value: str = None):
         assert sha.hexdigest() == hash_value
     except AssertionError:
         click.echo(
-            f'File {filename} is corrupt. '
-            'Delete it manually and restart the program.'
+            f"File {filename} is corrupt. "
+            "Delete it manually and restart the program."
         )
     else:
-        click.echo(f'File {filename} is validated.')
+        click.echo(f"File {filename} is validated.")
 
 
 @click.group(context_settings=CONTEXT_SETTINGS, chain=True)
@@ -162,20 +162,20 @@ def cli():
 @cli.command()
 def download():
     """Download files specified in ``URLS``."""
-    click.echo('\n### Start downloading required files.\n')
+    click.echo("\n### Start downloading required files.\n")
     for filename, (url, _) in FILES.items():
         download_file(filename, url)
-    click.echo('\n### End\n')
+    click.echo("\n### End\n")
 
 
 @cli.command()
 def validate():
     """Validate downloads with hashes in ``HASHES``."""
-    click.echo('### Start validating required files.\n')
+    click.echo("### Start validating required files.\n")
     for filename, (_, hash_value) in FILES.items():
         validate_file(filename, hash_value)
-    click.echo('\n### End\n')
+    click.echo("\n### End\n")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()

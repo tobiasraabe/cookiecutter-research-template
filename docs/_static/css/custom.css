@@ -1,0 +1,12 @@
+/* Change colors of the theme. */
+.wy-side-nav-search {
+    background-color: #dd4814;
+}
+.wy-side-nav-search input[type=text] {
+    border-color: #bf3e11;
+}
+/* Change the minimum size of labels for bibliography entries so that it is
+   perfectly aligned.*/
+.rst-content td.label {
+    min-width: 135px;
+}

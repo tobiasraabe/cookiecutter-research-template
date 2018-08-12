@@ -17,41 +17,41 @@ import sys
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath("../.."))
 
 # -- General configuration ----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '1.7.3'
+needs_sphinx = "1.7.3"
 
 # Add any Sphinx extension module names here, as strings.
 # They can be extensions coming with Sphinx (named 'sphinx.ext.*')
 # or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
-    'sphinxcontrib.bibtex',
-    'sphinx.ext.mathjax',
-    'nbsphinx',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.todo",
+    "sphinxcontrib.bibtex",
+    "sphinx.ext.mathjax",
+    "nbsphinx",
 ]
 
-autodoc_mock_imports = ['bld', 'matplotlib', 'numpy']
+autodoc_mock_imports = ["bld", "matplotlib", "numpy"]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = ".rst"
 
 # The encoding of source files.
-source_encoding = 'utf-8'
+source_encoding = "utf-8"
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # General information about the project.
-project = u'{{ cookiecutter.project_name }}'
-copyright = u'2018-, {{ cookiecutter.author }}'  # noqa: A001
+project = "{{ cookiecutter.project_name }}"
+copyright = "2018-, {{ cookiecutter.author }}"  # noqa: A001
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -70,7 +70,7 @@ copyright = u'2018-, {{ cookiecutter.author }}'  # noqa: A001
 # non-false value, then it is used:
 # today = '
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = '%d %B %Y'
+today_fmt = "%d %B %Y"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -91,17 +91,17 @@ add_module_names = False
 show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = "sphinx"
 
 # A list of ignored prefixes for module index sorting.
-modindex_common_prefix = ['src.']
+modindex_common_prefix = ["src."]
 
 
 # -- Options for HTML output --------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -171,21 +171,21 @@ html_theme = 'sphinx_rtd_theme'
 # html_use_opensearch = '
 
 # This is the file name suffix for HTML files (e.g. '.xhtml').
-html_file_suffix = '.html'
+html_file_suffix = ".html"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'somedoc'
+htmlhelp_basename = "somedoc"
 
 
 # -- Options for LaTeX output -------------------------------------------------
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    'papersize': 'a4paper',
+    "papersize": "a4paper",
     # The font size ('10pt', '11pt' or '12pt').
-    'pointsize': '11pt',
+    "pointsize": "11pt",
     # Remove the 'Release ...' subtitle from the LaTeX frontpage.
-    'releasename': '',
+    "releasename": "",
     # Additional stuff for the LaTeX preamble.
     # 'preamble': ',
 }
@@ -195,11 +195,11 @@ latex_elements = {
 # list will only consist of one tuple for the master file.
 latex_documents = [
     (
-        'index',
-        'project_documentation.tex',
-        'Documentation of {{ cookiecutter.project_name }}',
-        '{{ cookiecutter.author }}',
-        'manual',
+        "index",
+        "project_documentation.tex",
+        "Documentation of {{ cookiecutter.project_name }}",
+        "{{ cookiecutter.author }}",
+        "manual",
     )
 ]
 

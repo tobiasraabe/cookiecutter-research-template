@@ -11,15 +11,15 @@ def cli():
     include flake8-isort to tox.
 
     """
-    click.echo('Start reformatting files with isort.')
+    click.echo("Start reformatting files with isort.")
     # -sp needed as [isort] in tox.ini in cookie will be read too
-    os.system('isort . -rc -sp tox.ini')
-    click.echo('Start reformatting files with black.')
-    os.system('black .')
-    click.echo('Start reformatting files with isort again for commas.')
-    os.system('isort . -rc -sp tox.ini')
-    click.echo('End reformatting files.')
+    os.system("isort . -rc -sp tox.ini")
+    click.echo("Start reformatting files with black.")
+    os.system("black .")
+    click.echo("Start reformatting files with isort again for commas.")
+    os.system("isort . -rc -sp tox.ini")
+    click.echo("End reformatting files.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()

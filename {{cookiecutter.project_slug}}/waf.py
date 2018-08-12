@@ -32,16 +32,16 @@ POSSIBILITY OF SUCH DAMAGE.
 import os
 import sys
 
-VERSION = '2.0.8'
+VERSION = "2.0.8"
 cwd = os.getcwd()
 join = os.path.join
 
 name = sys.argv[0]
 base = os.path.dirname(os.path.abspath(name))
-wafdir = join(base, '.mywaflib')
+wafdir = join(base, ".mywaflib")
 sys.path.insert(0, wafdir)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from waflib import Scripting
 
     Scripting.waf_entry_point(cwd, VERSION, wafdir)
