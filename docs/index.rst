@@ -26,11 +26,3 @@ and should help researchers to write better code.
     pyup
     travis
     code_conventions
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
