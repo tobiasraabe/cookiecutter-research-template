@@ -3,7 +3,7 @@
     | <b><a href="https://github.com/tobiasraabe/cookiecutter-research-template#installation">Installation</a></b>
     | <b><a href="https://github.com/tobiasraabe/cookiecutter-research-template#features">Features</a></b>
     | <b><a href="https://cookiecutter-research-template.readthedocs.io/en/latest/index.html">Documentation</a></b>
-    | 
+    |
 
     <h1>cookiecutter-research-template</h1>
 
@@ -17,6 +17,9 @@
 .. image:: https://readthedocs.org/projects/cookiecutter-research-template/badge/?version=latest
     :target: https://cookiecutter-research-template.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/code%20style-black-black.svg
+    :target: https://github.com/ambv/black
 
 
 Introduction
