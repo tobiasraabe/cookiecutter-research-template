@@ -25,14 +25,14 @@ without influencing the way the code works.
 The project contains two different formatters.
 
 
-Black
-~~~~~
+`Black <https://github.com/ambv/black>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Black is relatively new in the Python ecosystem and calls itself the
 uncompromising Python code formatter. The slogan is true. There are almost no
 options to choose a different style except line length and whether you want to
 use single quotes, ``'``, or double quotes, ``"``, for strings. But, it
-definitely produces more readable code and helps you in learning what good code
+definitely produces more readable code and helps you to learn what good code
 looks like.
 
 The default line length is set to 79. Other common values are 80, 88, 120. 80
@@ -52,8 +52,8 @@ to keep it your way, insert ``skip-string-normalization = true`` in the
 ``pyproject.toml``
 
 
-isort
-~~~~~
+`isort <https://github.com/timothycrosley/isort>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 isort sorts your imports alphabetically and into sections, so that you do not
 have to do it.
