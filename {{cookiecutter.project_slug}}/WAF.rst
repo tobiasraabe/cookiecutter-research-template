@@ -12,9 +12,9 @@ tend out to be extremely slow. Use one of the following instead.
   .. code-block:: python
 
     ctx(
-        features='subst',
-        source=ctx.path_to(ctx, 'IN_DATA', 'file.pkl'),
-        target=ctx.path_to(ctx, 'OUT_DATA', 'file.pkl'),
+        features="subst",
+        source=ctx.path_to(ctx, "IN_DATA", "file.pkl"),
+        target=ctx.path_to(ctx, "OUT_DATA", "file.pkl"),
         is_copy=True,
     )
 
