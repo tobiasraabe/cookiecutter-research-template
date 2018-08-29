@@ -41,5 +41,6 @@ if __name__ == "__main__":
         remove_file("debug.ps1")
 
     if "{{ cookiecutter.add_formatter }}" != "y":
-        remove_file("format_python_files.py")
+        remove_file("format_project.py")
+        remove_file(".format_docs.sh")
         remove_file("pyproject.toml")

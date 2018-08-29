@@ -19,11 +19,13 @@ def test_remove_downloader(cookies):
 def test_remove_formatter(cookies):
     result = cookies.bake(extra_context={"add_formatter": "n"})
 
-    formatter = result.project.join("format_python_files.py")
+    formatter = result.project.join("format_project.py")
+    formatter_docs = result.project.join(".format_docs.py")
     pyproject = result.project.join("pyproject.toml")
     tox = result.project.join("tox.ini").read()
 
     assert result.exit_code == 0
     assert formatter.check(exists=0)
+    assert formatter_docs.check(exists=0)
     assert pyproject.check(exists=0)
     assert "[isort]" not in tox
