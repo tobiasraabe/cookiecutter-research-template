@@ -1,5 +1,7 @@
 import os
 
+from pathlib import Path
+
 import click
 
 
@@ -12,11 +14,19 @@ def cli():
 
     """
     click.echo("Start reformatting files with isort.")
-    os.system("isort . -rc")
+
+    files = (
+        list(Path(".").glob("**/wscript"))
+        + list(Path(".").glob("*.py"))
+        + list(Path(".").glob("src/**/*.py"))
+    )
+    files = " ".join([str(i) for i in files])
+
+    os.system(f"isort {files} -sp tox.ini")
+
     click.echo("Start reformatting files with black.")
     os.system("black .")
-    click.echo("Start reformatting files with isort again for commas.")
-    os.system("isort . -rc")
+
     click.echo("End reformatting files.")
 
 
