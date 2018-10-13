@@ -1,5 +1,7 @@
 import os
 
+from pathlib import Path
+
 import click
 
 
@@ -12,10 +14,20 @@ def cli():
 
     """
     click.echo("Start reformatting files with isort.")
-    # -sp needed as [isort] in tox.ini in cookie will be read too
-    os.system("isort . -rc -sp tox.ini")
+
+    files = (
+        list(Path(".").glob("*.py"))
+        + list(Path("{{cookiecutter.project_slug}}").glob("*.py"))
+        + list(Path("{{cookiecutter.project_slug}}").glob("**/wscript"))
+        + list(Path("{{cookiecutter.project_slug}}").glob("src/**/*.py"))
+    )
+    files = " ".join([str(i) for i in files])
+
+    os.system(f"isort {files} -sp tox.ini")
+
     click.echo("Start reformatting files with black.")
     os.system("black .")
+
     click.echo("End reformatting files.")
 
 
