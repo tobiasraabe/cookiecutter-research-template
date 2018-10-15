@@ -1,4 +1,4 @@
-black==18.6b1
+black==18.9b0
 click==6.7
 cookiecutter==1.4.0
 flake8==3.5.0
