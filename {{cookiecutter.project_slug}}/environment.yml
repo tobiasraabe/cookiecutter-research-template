@@ -7,7 +7,7 @@ dependencies:
   - python-graphviz=0.8.2
   - pip:
 {% if cookiecutter.add_formatter == 'y' %}
-    - black==18.6b4
+    - black==18.9b0
 {% endif %}
     - click==6.7
 {% if cookiecutter.add_tox == 'y' %}
