@@ -15,7 +15,7 @@ styles = {
         "fontsize": "48",
         "fontcolor": "white",
         "bgcolor": "#333333",
-        "rankdir": "LR",
+        "rankdir": "TB",
     },
     "nodes": {
         "fontname": "Helvetica",
