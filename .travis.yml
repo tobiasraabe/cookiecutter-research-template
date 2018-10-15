@@ -6,6 +6,11 @@ notifications:
     on_success: never
     on_failure: never
 
+os:
+  - linux
+  - osx
+  - windows
+
 # Configure supported Python versions
 language: python
 
