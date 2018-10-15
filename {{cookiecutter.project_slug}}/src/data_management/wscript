@@ -1,6 +1,3 @@
-#! python
-
-
 def build(ctx):
 
     # Illustrate simple use of run_py_script
