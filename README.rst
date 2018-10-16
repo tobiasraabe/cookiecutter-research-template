@@ -57,7 +57,16 @@ typing
 
 Answer all the prompts and a folder ``cookiecutter-research-template`` is
 created in your current directory. Rename the folder initialize a repository.
-Happy research!
+
+At last, create a conda environment which facilitates the handling of the
+scientific Python stack by a lot. The `environment.yml` contains a starter
+collection of useful packages.
+
+.. code-block:: bash
+
+    $ conda env create -f environment.yml -n <env-name>
+
+Finally, happy research!
 
 
 Features
