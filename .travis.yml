@@ -8,7 +8,7 @@ os:
   - osx
   # - windows  # Does not support Python at the moment. Handled by Appveyor.
 
-osx_image: xcode8.3  # Travis does not support Python on all OSX images
+osx_image: xcode9.3  # Travis does not support Python on all OSX images
 
 language: python
 

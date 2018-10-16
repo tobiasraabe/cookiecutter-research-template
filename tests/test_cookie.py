@@ -1,9 +1,9 @@
-import os
+import sys
 
 
 def test_bake_project(cookies):
-    python_version = os.environ["TRAVIS_PYTHON_VERSION"]
-    print(python_version)
+    major, minor = sys.version_info[:2]
+    python_version = f"{major}.{minor}"
 
     result = cookies.bake(
         extra_context={

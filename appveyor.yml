@@ -1,5 +1,5 @@
-# What Python version is installed where:
-# http://www.appveyor.com/docs/installed-software#python
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
 
 environment:
   matrix:
