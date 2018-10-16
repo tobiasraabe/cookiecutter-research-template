@@ -20,16 +20,17 @@ os:
             # one day, at which point we will probably reomve testing on OSX if
             # it is not supported then.
 
-include:
-  - os: osx
-    osx_image: xcode8.3
-    python: "3.5-dev"
-  - os: osx
-    osx_image: xcode8.3
-    python: "3.6-dev"
-  - os: osx
-    osx_image: xcode8.3
-    python: "3.7-dev"
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode8.3
+      python: "3.5-dev"
+    - os: osx
+      osx_image: xcode8.3
+      python: "3.6-dev"
+    - os: osx
+      osx_image: xcode8.3
+      python: "3.7-dev"
 
 install:
   - pip install -U tox-travis
