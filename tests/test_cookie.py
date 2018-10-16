@@ -1,4 +1,5 @@
 import sys
+import os
 
 
 def test_bake_project(cookies):
@@ -24,6 +25,7 @@ def test_remove_downloader(cookies):
     downloader = result.project.join("prepare_data_for_project.py")
 
     assert result.exit_code == 0
+    assert result.exception is None
     assert downloader.check(exists=0)
 
 
@@ -38,3 +40,17 @@ def test_remove_formatter(cookies):
     assert formatter.check(exists=0)
     assert pyproject.check(exists=0)
     assert "[isort]" not in tox
+
+
+def test_check_conda_environment_creation(cookies):
+    result = cookies.bake(
+        extra_context={
+            "create_conda_environment_at_finish": "y",
+            "conda_environment_name": "test",
+        }
+    )
+
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    os.system("activate test")
