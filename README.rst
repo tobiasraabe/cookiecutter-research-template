@@ -58,15 +58,15 @@ typing
 Answer all the prompts and a folder ``cookiecutter-research-template`` is
 created in your current directory. Rename the folder initialize a repository.
 
-At last, create a conda environment which facilitates the handling of the
-scientific Python stack by a lot. The `environment.yml` contains a starter
-collection of useful packages.
+One of the last prompts is about whether the template should create a conda
+environment from the pre-configured `environment.yml`. If that is not what you
+want, stick to the default answer. You can fetch it later by running
 
 .. code-block:: bash
 
     $ conda env create -f environment.yml -n <env-name>
 
-Finally, happy research!
+Happy research!
 
 
 Features
@@ -151,25 +151,26 @@ Downloading data for the project
 
 Cleaning the project
     ``clean.py`` offers a way to clean your project from artifacts and unused
-    files. Running
+    files. Basically, it is a wrapper around `git clean`, but with more
+    convenience.
 
     .. code-block:: bash
 
         $ python clean.py
 
-    performs a dry-run, so you can be sure that only useless files are deleted.
-    Then, run
+    performs a dry-run, so you can be sure that only unnecessary files are
+    deleted. Then, run
 
     .. code-block:: bash
 
         $ python clean.py --force
 
-    to actually delete the files.
+    to delete the files.
 
 Visualization of the DAG
-    A graphic of the DAG is compiled at the end of the build process and serves
-    just as a nice picture of the complexity of the project or allows for
-    visual debugging.
+    A graphic of the DAG is compiled at the end of the Waf build process and
+    serves as a nice picture of the complexity of the project (a little bit
+    bragging is ok :wink:) or allows for visual debugging.
 
     .. raw:: html
 
