@@ -71,9 +71,10 @@ this:
     for _ in range(3):
         print("Hey")
 
-Replacing ``_`` with ``a`` would yield a ``B007`` error
+Rules like this can be hard to remember while linters help to conform. E.g.
+flake8 in its implemented version will show the following error messages:
 
-.. code-block:: plain
+.. code-block:: text
 
     .\temp.py:1:5: B007 Loop control variable 'a' not used within the loop
                    body. If this is intended, start the name with an
