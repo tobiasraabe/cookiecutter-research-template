@@ -22,7 +22,7 @@ def test_bake_project(cookies):
 
 
 def test_remove_downloader(cookies):
-    result = cookies.bake(extra_context={"add_downloader": "n"})
+    result = cookies.bake(extra_context={"add_downloader": "no"})
 
     downloader = result.project.join("prepare_data_for_project.py")
 
@@ -32,7 +32,7 @@ def test_remove_downloader(cookies):
 
 
 def test_remove_formatter(cookies):
-    result = cookies.bake(extra_context={"add_formatter": "n"})
+    result = cookies.bake(extra_context={"add_formatter": "no"})
 
     formatter = result.project.join("format_python_files.py")
     pyproject = result.project.join("pyproject.toml")
@@ -51,7 +51,7 @@ def test_remove_formatter(cookies):
 def test_check_conda_environment_creation(cookies):
     result = cookies.bake(
         extra_context={
-            "create_conda_environment_at_finish": "y",
+            "create_conda_environment_at_finish": "yes",
             "conda_environment_name": "test",
         }
     )
