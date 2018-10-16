@@ -27,7 +27,64 @@ def test_remove_downloader(cookies):
 
     assert result.exit_code == 0
     assert result.exception is None
+
     assert downloader.check(exists=0)
+
+
+def test_remove_readthedocs(cookies):
+    result = cookies.bake(extra_context={"add_readthedocs": "no"})
+
+    readthedocs = result.project.join("readthedocs.yml")
+    readme = result.project.join("README.rst").read()
+
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    assert readthedocs.check(exists=0)
+    assert "readthedocs" not in readme
+
+
+def test_remove_pyup(cookies):
+    result = cookies.bake(extra_context={"add_pyup": "no"})
+
+    pyup = result.project.join(".pyup.yml")
+    readme = result.project.join("README.rst").read()
+
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    assert pyup.check(exists=0)
+    assert "pyup" not in readme
+
+
+def test_remove_travis(cookies):
+    result = cookies.bake(extra_context={"add_travis": "no"})
+
+    travis = result.project.join("travis.yml")
+    readme = result.project.join("README.rst").read()
+
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    assert travis.check(exists=0)
+    assert "travis" not in readme
+
+
+def test_remove_pytest(cookies):
+    result = cookies.bake(extra_context={"add_pytest": "no"})
+
+    tox = result.project.join("tox.ini").read()
+    test_file = result.project.join(
+        "src", "data_management", "test_data_management.py"
+    )
+    wscript = result.project.join("src", "data_management", "wscript").read()
+
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    assert "pytest" not in tox
+    assert test_file.check(exists=0)
+    assert "pytest" not in wscript
 
 
 def test_remove_formatter(cookies):
@@ -38,9 +95,12 @@ def test_remove_formatter(cookies):
     tox = result.project.join("tox.ini").read()
 
     assert result.exit_code == 0
+    assert result.exception is None
+
     assert formatter.check(exists=0)
     assert pyproject.check(exists=0)
-    assert "[isort]" not in tox
+    assert "isort" not in tox
+    assert "black" not in tox
 
 
 @pytest.mark.skipif(

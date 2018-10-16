@@ -1,9 +1,9 @@
 {
   "author": "Tobias Raabe",
-  "email": "tobiasraabe@uni-bonn.de",
+  "email": "{{ cookiecutter.author.lower().replace(' ', '') }}@example.com",
   "affiliation": "University of Bonn",
   "project_name": "Reproducible Research Template",
-  "github_username": "tobiasraabe",
+  "github_username": "{{ cookiecutter.author.lower().replace(' ', '') }}",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Template for reproducible research.",
   "pypi_username": "{{ cookiecutter.github_username }}",

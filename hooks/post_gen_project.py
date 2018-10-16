@@ -1,31 +1,34 @@
-#!/usr/bin/env python
 import os
+from pathlib import Path
 
-PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+PROJECT_DIRECTORY = Path.cwd()
 
 
-def remove_file(filepath):
-    os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+def remove_file(*filepath):
+    try:
+        Path(PROJECT_DIRECTORY, *filepath).unlink()
+    except FileNotFoundError:
+        pass
 
 
 if __name__ == "__main__":  # noqa: C901
 
     if "{{ cookiecutter.create_author_file }}" == "no":
         remove_file("AUTHORS.rst")
-        remove_file("src/documentation/authors.rst")
+        remove_file("src", "documentation", "authors.rst")
 
     if "{{ cookiecutter.create_history_file }}" == "no":
         remove_file("HISTORY.rst")
-        remove_file("src/documentation/history.rst")
+        remove_file("src", "documentation", "history.rst")
 
     if "{{ cookiecutter.add_pytest }}" == "no":
-        # TODO
-        remove_file("tests/__init__.py")
+        remove_file("src", "data_management", "test_data_management.py")
 
     if "{{ cookiecutter.add_pyup }}" == "no":
         remove_file(".pyup.yml")
 
     if "{{ cookiecutter.add_tox }}" == "no":
+        remove_file(".travis.yml")
         remove_file("tox.ini")
 
     if "{{ cookiecutter.add_travis }}" == "no":
@@ -43,6 +46,9 @@ if __name__ == "__main__":  # noqa: C901
     if "{{ cookiecutter.add_formatter }}" == "no":
         remove_file("format_python_files.py")
         remove_file("pyproject.toml")
+
+    if "{{ cookiecutter.add_readthedocs }}" == "no":
+        remove_file("readthedocs.yml")
 
     if "{{ cookiecutter.create_conda_environment_at_finish }}" == "yes":
         os.system(

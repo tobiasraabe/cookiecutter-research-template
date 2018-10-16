@@ -2,7 +2,7 @@
 {{ cookiecutter.project_name }}
 {% for _ in cookiecutter.project_name %}={% endfor %}
 
-{% if cookiecutter.add_pyup == "yes" %}
+{% if cookiecutter.add_travis == "yes" %}
 .. image:: https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg?branch=master
     :target: https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 {% endif %}
