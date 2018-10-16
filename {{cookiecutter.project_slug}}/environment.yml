@@ -27,9 +27,9 @@ dependencies:
     - nbsphinx==0.3.3
 {% if cookiecutter.add_tox == "yes" %}    - pep8-naming==0.7.0
     - pybtex==0.21{% endif %}
-{% if cookiecutter.add_pytest == "yes" %}    - pytest==3.7.1
+    - pytest==3.7.1
     - pytest-cov==2.5.1
-    - pytest-pythonpath==0.7.2{% endif %}
+    - pytest-pythonpath==0.7.2
     - sphinx==1.7.6
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.1

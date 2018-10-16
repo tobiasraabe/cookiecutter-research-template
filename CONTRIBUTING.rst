@@ -1,6 +1,5 @@
-============
 Contributing
-============
+------------
 
 Contributions are welcome, and they are greatly appreciated! Every
 little bit helps, and credit will always be given.
@@ -8,7 +7,7 @@ little bit helps, and credit will always be given.
 You can contribute in many ways:
 
 Types of Contributions
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 Report Bugs
 ~~~~~~~~~~~
@@ -55,7 +54,7 @@ If you are proposing a new feature:
   are welcome :)
 
 Get Started!
-------------
+^^^^^^^^^^^^
 
 Ready to contribute? Here's how to set up `cookiecutter-research-template` for
 local development. Please note this documentation assumes you already have
@@ -137,7 +136,7 @@ local development. Please note this documentation assumes you already have
 10. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Before you submit a pull request, check that it meets these guidelines:
 
@@ -153,7 +152,8 @@ Before you submit a pull request, check that it meets these guidelines:
    and make sure that the tests pass for all supported Python versions.
 
 Add a New Test
----------------
+^^^^^^^^^^^^^^
+
 When fixing a bug or adding features, it's good practice to add a test to
 demonstrate your fix or new feature behaves as expected. These tests should
 focus on one tiny bit of functionality and prove changes are correct.

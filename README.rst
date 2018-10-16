@@ -175,7 +175,7 @@ Visualization of the DAG
     .. raw:: html
 
         <p align="center">
-            <img src="_static/dag.png">
+            <img src="docs/_static/dag.png">
         </p>
 
 Others

@@ -1,4 +1,5 @@
 import os
+
 from pathlib import Path
 
 PROJECT_DIRECTORY = Path.cwd()
@@ -20,9 +21,6 @@ if __name__ == "__main__":  # noqa: C901
     if "{{ cookiecutter.create_history_file }}" == "no":
         remove_file("HISTORY.rst")
         remove_file("src", "documentation", "history.rst")
-
-    if "{{ cookiecutter.add_pytest }}" == "no":
-        remove_file("src", "data_management", "test_data_management.py")
 
     if "{{ cookiecutter.add_pyup }}" == "no":
         remove_file(".pyup.yml")

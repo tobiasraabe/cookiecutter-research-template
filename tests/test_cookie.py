@@ -70,23 +70,6 @@ def test_remove_travis(cookies):
     assert "travis" not in readme
 
 
-def test_remove_pytest(cookies):
-    result = cookies.bake(extra_context={"add_pytest": "no"})
-
-    tox = result.project.join("tox.ini").read()
-    test_file = result.project.join(
-        "src", "data_management", "test_data_management.py"
-    )
-    wscript = result.project.join("src", "data_management", "wscript").read()
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert "pytest" not in tox
-    assert test_file.check(exists=0)
-    assert "pytest" not in wscript
-
-
 def test_remove_formatter(cookies):
     result = cookies.bake(extra_context={"add_formatter": "no"})
 

@@ -6,9 +6,9 @@ def build(ctx):
         target=ctx.path_to(ctx, "OUT_DATA", "initial_locations.csv"),
         name="get_simulation_draws",
     )
-{% if cookiecutter.add_pytest == "yes" %}
+
     ctx(
         rule="pytest ../src/data_management --no-cov",
         # deps=[],
         name="test_data_management",
-    ){% endif %}
+    )

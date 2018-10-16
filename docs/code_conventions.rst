@@ -1,12 +1,12 @@
 Code Conventions
-================
+----------------
 
 Code conventions are rules to follow during coding to prevent mistakes and
 ensure readability. The last point is crucial and cannot be stressed enough.
 
 ..
 
-    Code is far more often read than written.
+    *Code is far more often read than written.*
 
 Therefore, one has a huge incentive to write as readable as possible to reduce
 one's own mental effort, to reduce it for others who then are more willing to
@@ -17,12 +17,10 @@ this goal.
 
 
 Formatters
-----------
+^^^^^^^^^^
 
 Formatters are tools which take the code and transform it to something else
 without influencing the way the code works.
-
-The project contains two different formatters.
 
 
 `Black <https://github.com/ambv/black>`_
@@ -49,7 +47,7 @@ real language. Black settles on double quotes only and despite that I am more
 inclined to use single quotes myself, I think standardization is a good thing.
 Therefore, the formatter will recode all strings to double quotes. If you want
 to keep it your way, insert ``skip-string-normalization = true`` in the
-``pyproject.toml``
+``pyproject.toml``.
 
 
 `isort <https://github.com/timothycrosley/isort>`_
@@ -60,7 +58,7 @@ have to do it.
 
 
 Linters
--------
+^^^^^^^
 
 To lint a file means to check the file for errors. The errors can be stylistic
 errors, warning if you do not follow code conventions, etc.. One example is
@@ -69,12 +67,22 @@ this:
 
 .. code-block:: python
 
+    # Content of temp.py
     for _ in range(3):
         print("Hey")
 
+Replacing ``_`` with ``a`` would yield a ``B007`` error
 
-flake8
-~~~~~~
+.. code-block:: plain
+
+    .\temp.py:1:5: B007 Loop control variable 'a' not used within the loop
+                   body. If this is intended, start the name with an
+                   underscore.
+    .\temp.py:2:5: T001 print found.
+
+
+`flake8 <https://github.com/pycqa/flake8>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 flake8 is common tool to lint Python files. It does not only recognize
 stylistic issues which should be fixed with Black anyway, but it also makes
@@ -82,15 +90,15 @@ comments on the naming of variables, suggestions for rewriting code segments
 and more.
 
 
-doc8
-~~~~
+`doc8 <https://github.com/openstack/doc8>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 doc8 helps you to avoid errors in restructured-text files which are hard to
 debug using the sphinx error log.
 
 
-restructuredtext_lint
-~~~~~~~~~~~~~~~~~~~~~
+`restructuredtext_lint <https://github.com/twolfson/restructuredtext-lint>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool validates your ``README.rst`` in case you want to publish your
 project as a package on PyPI.
