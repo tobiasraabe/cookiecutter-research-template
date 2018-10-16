@@ -1,5 +1,16 @@
+import sys
+
+
 def test_bake_project(cookies):
-    result = cookies.bake(extra_context={"project_slug": "helloworld"})
+    major, minor = sys.version_info[:2]
+    python_version = "{}.{}".format(major, minor)
+
+    result = cookies.bake(
+        extra_context={
+            "project_slug": "helloworld",
+            "python_version": python_version,
+        }
+    )
 
     assert result.exit_code == 0
     assert result.exception is None

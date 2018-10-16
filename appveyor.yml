@@ -1,31 +1,20 @@
-# What Python version is installed where:
-# http://www.appveyor.com/docs/installed-software#python
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
 
 environment:
   matrix:
-    - PYTHON: "C:\\Python27"
-      TOX_ENV: "py27"
-
-    - PYTHON: "C:\\Python27-x64"
-      TOX_ENV: "py27"
-
-    - PYTHON: "C:\\Python34"
-      TOX_ENV: "py34"
-
-    - PYTHON: "C:\\Python34-x64"
-      TOX_ENV: "py34"
-
     - PYTHON: "C:\\Python35"
       TOX_ENV: "py35"
-
     - PYTHON: "C:\\Python35-x64"
       TOX_ENV: "py35"
-
     - PYTHON: "C:\\Python36"
       TOX_ENV: "py36"
-
     - PYTHON: "C:\\Python36-x64"
       TOX_ENV: "py36"
+    - PYTHON: "C:\\Python37"
+      TOX_ENV: "py37"
+    - PYTHON: "C:\\Python37-x64"
+      TOX_ENV: "py37"
 
 init:
   - set PATH=%PYTHON%;%PYTHON%\Scripts;C:\MinGW\msys\1.0\bin;%PATH%
@@ -43,9 +32,9 @@ build: false  # Not a C# project, build stuff at the test step instead.
 test_script:
   - "%PYTHON%/Scripts/tox -e %TOX_ENV%"
 
-after_test:
-  - "%PYTHON%/python setup.py --command-packages wheel bdist_wheel"
-  - ps: "ls dist"
+# after_test:
+#   - "%PYTHON%/python setup.py --command-packages wheel bdist_wheel"
+#   - ps: "ls dist"
 
-artifacts:
-  - path: dist\*
+# artifacts:
+#   - path: dist\*
