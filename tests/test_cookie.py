@@ -1,5 +1,6 @@
-import sys
 import os
+import sys
+
 import pytest
 
 
@@ -43,8 +44,10 @@ def test_remove_formatter(cookies):
     assert "[isort]" not in tox
 
 
-@pytest.mark.skipif(sys.version_info != (3, 6),
-                    reason="Miniconda is only installed for Python 3.6")
+@pytest.mark.skipif(
+    sys.version_info != (3, 7),
+    reason="Miniconda is only installed for Python 3.7",
+)
 def test_check_conda_environment_creation(cookies):
     result = cookies.bake(
         extra_context={

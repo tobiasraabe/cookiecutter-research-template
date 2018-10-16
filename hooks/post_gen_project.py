@@ -8,7 +8,7 @@ def remove_file(filepath):
     os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # noqa: C901
 
     if "{{ cookiecutter.create_author_file }}" != "y":
         remove_file("AUTHORS.rst")
