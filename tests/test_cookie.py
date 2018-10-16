@@ -60,3 +60,4 @@ def test_check_conda_environment_creation(cookies):
     assert result.exception is None
 
     os.system("activate test")
+    assert os.environ["CONDA_DEFAULT_ENV"] == "test"

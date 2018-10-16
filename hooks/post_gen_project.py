@@ -46,7 +46,7 @@ if __name__ == "__main__":  # noqa: C901
 
     if "{{ cookiecutter.create_conda_environment_at_finish }}" == "yes":
         os.system(
-            "conda-env create "
-            "-f {{ cookiecutter.project_slug }}/environment.yml "
-            "-n {{ cookiecutter.conda_environment_name }}"
+            "conda env create "
+            "--file environment.yml "
+            "--name {{ cookiecutter.conda_environment_name }}"
         )
