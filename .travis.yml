@@ -31,6 +31,7 @@ matrix:
 
 install:
   - pip install -U tox-travis
+  - bash install_miniconda.sh
 
 script: tox
 
