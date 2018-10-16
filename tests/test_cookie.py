@@ -45,7 +45,7 @@ def test_remove_formatter(cookies):
 
 
 @pytest.mark.skipif(
-    sys.version_info != (3, 7),
+    sys.version_info[:2] != (3, 7),
     reason="Miniconda is only installed for Python 3.7",
 )
 def test_check_conda_environment_creation(cookies):
