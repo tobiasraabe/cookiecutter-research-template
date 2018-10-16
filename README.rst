@@ -10,6 +10,9 @@
 .. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
 
+.. image:: https://ci.appveyor.com/api/projects/status/6etx3nu4vqgr9f30/branch/master?svg=true
+    :target: https://ci.appveyor.com/project/tobiasraabe/cookiecutter-research-template
+
 .. image:: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/shield.svg
     :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
     :alt: Updates

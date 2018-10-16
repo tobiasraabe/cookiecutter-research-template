@@ -1,6 +1,3 @@
-# Configuration file for automatic testing at travis-ci.org
-
-# Configure notifications
 notifications:
   email:
     on_success: never
@@ -9,9 +6,10 @@ notifications:
 os:
   - linux
   - osx
-  - windows
+  # - windows  # Does not support Python at the moment. Handled by Appveyor.
 
-# Configure supported Python versions
+osx_image: xcode8.3  # Travis does not support Python on all OSX images
+
 language: python
 
 python:
@@ -19,11 +17,9 @@ python:
   - "3.6"
   - "3.7-dev"
 
-# Command to install dependencies, e.g. pip install -r requirements.txt
-# --use-mirrors
 install:
   - pip install -U tox-travis
-  - pip install -r requirements.txt
+  # - pip install -r requirements.txt
 
 # Command to run tests, e.g. python setup.py test
 script: tox
