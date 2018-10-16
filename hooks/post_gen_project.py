@@ -43,3 +43,10 @@ if __name__ == "__main__":
     if "{{ cookiecutter.add_formatter }}" != "y":
         remove_file("format_python_files.py")
         remove_file("pyproject.toml")
+
+    if "{{ cookiecutter.create_conda_environment_at_finish }}" == "y":
+        os.system(
+            "conda env create "
+            "-f {{ cookiecutter.project_slug }}/environment.yml "
+            "-n {{ cookiecutter.conda_environment_name }}"
+        )

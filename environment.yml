@@ -5,14 +5,11 @@ dependencies:
   - jupyterlab=0.32.1
   - pandas=0.23.3
   - pscondaenvs=1.2.4
-  - python={{ cookiecutter.python_version }}
+  - python=3.6
   - python-graphviz=0.8.2
   - pip:
-{% if cookiecutter.add_formatter == 'y' %}
     - black==18.9b0
-{% endif %}
     - click==6.7
-{% if cookiecutter.add_tox == 'y' %}
     - doc8==0.8.0
     - flake8==3.5.0
     - flake8-bugbear==18.2.0
@@ -25,16 +22,11 @@ dependencies:
     - flake8-print==3.1.0
     - flake8-quotes==1.0.0
     - flake8-todo==0.7
-{% endif %}
-{% if cookiecutter.add_formatter == 'y' %}
     - isort==4.3.4
-{% endif %}
     - matplotlib==2.2.2
     - nbsphinx==0.3.3
-{% if cookiecutter.add_tox == 'y' %}
     - pep8-naming==0.7.0
     - pybtex==0.21
-{% endif %}
     - pytest==3.7.1
     - pytest-cov==2.5.1
     - pytest-pythonpath==0.7.2
@@ -42,9 +34,6 @@ dependencies:
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.1
     - sphinxcontrib-bibtex==0.4.0
-{% if cookiecutter.add_downloader == 'y' %}
     - tqdm==4.24.0
-{% endif %}
-{% if cookiecutter.add_tox == 'y' %}
     - tox==3.1.3
-{% endif %}
+
