@@ -3,7 +3,7 @@ import sys
 
 def test_bake_project(cookies):
     major, minor = sys.version_info[:2]
-    python_version = f"{major}.{minor}"
+    python_version = "{}.{}".format(major, minor)
 
     result = cookies.bake(
         extra_context={
