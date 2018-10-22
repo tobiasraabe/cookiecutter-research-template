@@ -29,7 +29,7 @@ dependencies:
     - pybtex==0.21
     - pytest==3.9.1
     - pytest-cov==2.6.0
-    - pytest-pythonpath==0.7.2
+    - pytest-pythonpath==0.7.3
     - sphinx==1.7.6
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.1
