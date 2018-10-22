@@ -24,7 +24,7 @@ dependencies:
     - flake8-todo==0.7
     - isort==4.3.4
     - matplotlib==3.0.0
-    - nbsphinx==0.3.3
+    - nbsphinx==0.3.5
     - pep8-naming==0.7.0
     - pybtex==0.21
     - pytest==3.9.1
