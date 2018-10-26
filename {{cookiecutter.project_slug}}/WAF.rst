@@ -1,6 +1,19 @@
 Tips and Tricks for Waf
 =======================
 
+Compiling the reports with LaTeX
+--------------------------------
+
+1. Compiling pollutes the command line interface. To shut it off, change
+   ``prompt`` to 0 in ``src/paper/wscript``. Unfortunately, if an error
+   happens, you have to switch back to find the source.
+   
+2. (Windows) Sometimes changes in the dependencies of the report are not
+   recognized and the document is not compiled. Maybe this is related to
+   `a similar issue with LatexTools <https://github.com/SublimeText/
+   LaTeXTools/issues/884#issuecomment-258092032>`_. In this case, type 
+   ``rm bld/src/paper`` to delete all built artifacts.
+
 Copying files
 -------------
 
