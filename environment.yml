@@ -30,7 +30,7 @@ dependencies:
     - pytest==4.0.0
     - pytest-cov==2.6.0
     - pytest-pythonpath==0.7.3
-    - sphinx==1.8.1
+    - sphinx==1.8.2
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.2
     - sphinxcontrib-bibtex==0.4.0
