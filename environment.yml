@@ -27,7 +27,7 @@ dependencies:
     - nbsphinx==0.3.5
     - pep8-naming==0.7.0
     - pybtex==0.22.0
-    - pytest==3.9.1
+    - pytest==4.0.1
     - pytest-cov==2.6.0
     - pytest-pythonpath==0.7.3
     - sphinx==1.8.1
