@@ -11,7 +11,7 @@ dependencies:
     - black==18.9b0
     - click==7.0
     - doc8==0.8.0
-    - flake8==3.5.0
+    - flake8==3.6.0
     - flake8-bugbear==18.8.0
     - flake8-builtins==1.4.1
     - flake8-commas==2.0.0
@@ -23,17 +23,17 @@ dependencies:
     - flake8-quotes==1.0.0
     - flake8-todo==0.7
     - isort==4.3.4
-    - matplotlib==3.0.0
-    - nbsphinx==0.3.5
+    - matplotlib==3.0.2
+    - nbsphinx==0.4.1
     - pep8-naming==0.7.0
-    - pybtex==0.21
-    - pytest==3.9.1
+    - pybtex==0.22.0
+    - pytest==4.0.2
     - pytest-cov==2.6.0
     - pytest-pythonpath==0.7.3
-    - sphinx==1.8.1
+    - sphinx==1.8.2
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.2
-    - sphinxcontrib-bibtex==0.4.0
+    - sphinxcontrib-bibtex==0.4.1
     - tqdm==4.28.1
-    - tox==3.5.2
+    - tox==3.6.1
 
