@@ -1,5 +1,5 @@
 Travis-CI
-=========
+---------
 
 Travis-CI is a service which allows you to test and deploy your projects. We
 are only interested in the first aspect, testing, as Travis-CI allows us to run
@@ -20,7 +20,7 @@ under the former constraint and can be given into the hands of private company.
 
 
 Installation
-------------
+^^^^^^^^^^^^
 
 To enable testing on travis-ci.com, go to https://travis-ci.com and choose log
 in with Github in the upper right corner. Then, you have to agree that
@@ -31,7 +31,7 @@ do afterwards as Travis-CI will automatically check your repositories for a
 To get an impression of a configuration file, take the following example of the
 Travis-CI configuration of this template.
 
-.. literalinclude:: ../.travis.yml
+.. literalinclude:: ../{{cookiecutter.project_slug}}/.travis.yml
 
 - ``notifications`` lets you define whether you want to be notified if a tests
   fails for some commit. My personal opinion is to disable notifications as
@@ -40,7 +40,7 @@ Travis-CI configuration of this template.
 - ``language`` defines the main language of your project. Depending on this
   choice, there are several other tools pre-installed.
 - ``python`` sets the Python version of your test environment. The default is
-  3.6, but you are free to change. Furthermore, you can test your project
+  3.6, but you are free to change it. Furthermore, you can test your project
   against multiple python versions by using:
 
   .. code-block:: yaml
@@ -57,7 +57,7 @@ user/customizing-the-build/>`_. There are several ways to differentiate between
 different stages of the build process. Here is one.
 
 - In ``before_install`` we download pandoc to be able to use the latex builder
-  for our documenation.
+  for our documentation.
 - In ``install`` we make sure that tox is installed and has the latest version
   to run our tests.
 - In ``script`` we actually run the tests. As mentioned before, if you only
@@ -73,7 +73,6 @@ different stages of the build process. Here is one.
   depend on data. In this case, I would recommend that you still include
   ``pytest`` and `mark tests which cannot succeed for different reasons
   <https://docs.pytest.org/en/latest/skipping.html>`_.
-
 - ``branches`` includes a current fix so that commits on PRs are not built
   twice.
 

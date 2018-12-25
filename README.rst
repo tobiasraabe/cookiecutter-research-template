@@ -10,6 +10,9 @@
 .. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
 
+.. image:: https://ci.appveyor.com/api/projects/status/6etx3nu4vqgr9f30/branch/master?svg=true
+    :target: https://ci.appveyor.com/project/tobiasraabe/cookiecutter-research-template
+
 .. image:: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/shield.svg
     :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
     :alt: Updates
@@ -54,6 +57,15 @@ typing
 
 Answer all the prompts and a folder ``cookiecutter-research-template`` is
 created in your current directory. Rename the folder initialize a repository.
+
+One of the last prompts is about whether the template should create a conda
+environment from the pre-configured `environment.yml`. If that is not what you
+want, stick to the default answer. You can fetch it later by running
+
+.. code-block:: bash
+
+    $ conda env create -f environment.yml -n <env-name>
+
 Happy research!
 
 
@@ -63,11 +75,11 @@ Features
 The template offers several features:
 
 Automatic dependency updates with `pyup <https://pyup.io>`_
-    Connect your Github repository with pyup.io and you get automatic PRs if
+    Connect your Github repository with https://pyup.io and you get automatic PRs if
     one of your dependency is outdated.
 
 Automatic testing with `Travis <https://travis-ci.com>`_
-    Connect your Github repository with travis-ci.com and the master branch and
+    Connect your Github repository with https://travis-ci.com and the master branch and
     PRs are automatically tested and you can see the results online.
 
 Testing with `tox <https://github.com/tox-dev/tox>`_
@@ -139,30 +151,31 @@ Downloading data for the project
 
 Cleaning the project
     ``clean.py`` offers a way to clean your project from artifacts and unused
-    files. Running
+    files. Basically, it is a wrapper around `git clean`, but with more
+    convenience.
 
     .. code-block:: bash
 
         $ python clean.py
 
-    performs a dry-run, so you can be sure that only useless files are deleted.
-    Then, run
+    performs a dry-run, so you can be sure that only unnecessary files are
+    deleted. Then, run
 
     .. code-block:: bash
 
         $ python clean.py --force
 
-    to actually delete the files.
+    to delete the files.
 
 Visualization of the DAG
-    A graphic of the DAG is compiled at the end of the build process and serves
-    just as a nice picture of the complexity of the project or allows for
-    visual debugging.
+    A graphic of the DAG is compiled at the end of the Waf build process and
+    serves as a nice picture of the complexity of the project (a little bit
+    bragging is ok :wink:) or allows for visual debugging.
 
     .. raw:: html
 
         <p align="center">
-            <img src="_static/dag.png">
+            <img src="docs/_static/dag.png">
         </p>
 
 Others

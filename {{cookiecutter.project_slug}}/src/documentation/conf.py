@@ -37,11 +37,7 @@ extensions = [
 
 autodoc_mock_imports = ["bld", "matplotlib", "numpy"]
 
-suppress_warnings = [
-    "app.add_directive",
-    "app.add_node",
-    "app.add_role",
-]
+suppress_warnings = ["app.add_directive", "app.add_node", "app.add_role"]
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ["_templates"]

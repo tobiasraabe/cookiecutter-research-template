@@ -1,5 +1,5 @@
 Installation
-============
+------------
 
 This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template.
 To use it, you need to install ``cookiecutter`` by running
@@ -17,4 +17,13 @@ typing
 
 Answer all the prompts and a folder ``cookiecutter-research-template`` is
 created in your current directory. Rename the folder initialize a repository.
+
+One of the last prompts is about whether the template should create a conda
+environment from the pre-configured `environment.yml`. If that is not what you
+want, stick to the default answer. You can fetch it later by running
+
+.. code-block:: bash
+
+    $ conda env create -f environment.yml -n <env-name>
+
 Happy research!

@@ -1,0 +1,31 @@
+exclude: \.mywaflib
+repos:
+-   repo: local
+    hooks:
+    - id: black
+      name: Black - The Uncompromising Code Formatter
+      language: system
+      entry: black
+      types: [python]
+    - id: blacken-docs
+      name: blacken-docs - Black for Documentation
+      entry: blacken-docs
+      language: system
+      files: '\.(rst|md|markdown)'
+      args: [--line-length=79, --py36]
+    - id: flake8
+      name: flake8
+      language: system
+      entry: flake8 - Linting
+      types: [python]
+    - id: isort
+      name: isort - Sorting Imports
+      language: system
+      entry: isort
+      args: [--settings-path=tox.ini]
+      types: [python]
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.0.0
+    hooks:
+    -   id: check-yaml
+        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment).yml
