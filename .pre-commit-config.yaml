@@ -6,7 +6,7 @@ repos:
       name: Black - The Uncompromising Code Formatter
       language: system
       entry: black
-      types: [python]
+      files: '(\.pyi?|wscript)$'
     - id: blacken-docs
       name: blacken-docs - Black for Documentation
       entry: blacken-docs
