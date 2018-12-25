@@ -29,16 +29,18 @@ needs_sphinx = "1.7.3"
 # or your custom ones.
 extensions = [
     "sphinx.ext.autodoc",
+    "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "sphinxcontrib.bibtex",
-    "sphinx.ext.mathjax",
     "nbsphinx",
 ]
 
 autodoc_mock_imports = ["bld", "matplotlib", "numpy"]
 
+suppress_warnings = ["app.add_directive", "app.add_node", "app.add_role"]
+
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+# templates_path = ["_templates"]
 
 # The suffix of source filenames.
 source_suffix = ".rst"
@@ -56,7 +58,7 @@ copyright = "2018-, {{ cookiecutter.author }}"  # noqa: A001
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
-#
+
 # The short X.Y version.
 # version = '0.0'
 # The full version, including alpha/beta/rc tags.

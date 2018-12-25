@@ -19,10 +19,8 @@
     :alt: Documentation Status
 {% endif %}
 
-{% if cookiecutter.add_formatter == "yes" %}
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black
-{% endif %}
 
 {{ cookiecutter.project_short_description }}
 
