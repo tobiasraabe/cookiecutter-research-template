@@ -1,0 +1,6 @@
+update: all
+pin: True
+schedule: "every week"
+requirements:
+  - environment.yml
+close_prs: True
