@@ -41,10 +41,6 @@ if __name__ == "__main__":  # noqa: C901
     if "{{ cookiecutter.add_debugger }}" == "no":
         remove_file("debug.ps1")
 
-    if "{{ cookiecutter.add_formatter }}" == "no":
-        remove_file("format_python_files.py")
-        remove_file("pyproject.toml")
-
     if "{{ cookiecutter.add_readthedocs }}" == "no":
         remove_file("readthedocs.yml")
 

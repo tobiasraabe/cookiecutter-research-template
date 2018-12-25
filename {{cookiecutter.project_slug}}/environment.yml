@@ -8,7 +8,7 @@ dependencies:
   - python={{ cookiecutter.python_version }}
   - python-graphviz=0.8.2
   - pip:
-{% if cookiecutter.add_formatter == "yes" %}    - black==18.9b0{% endif %}
+    - black==18.9b0
     - click==6.7
 {% if cookiecutter.add_tox == "yes" %}    - doc8==0.8.0
     - flake8==3.5.0
@@ -22,7 +22,7 @@ dependencies:
     - flake8-print==3.1.0
     - flake8-quotes==1.0.0
     - flake8-todo==0.7{% endif %}
-{% if cookiecutter.add_formatter == "yes" %}    - isort==4.3.4{% endif %}
+    - isort==4.3.4
     - matplotlib==2.2.2
     - nbsphinx==0.3.3
 {% if cookiecutter.add_tox == "yes" %}    - pep8-naming==0.7.0

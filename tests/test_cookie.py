@@ -70,24 +70,6 @@ def test_remove_travis(cookies):
     assert "travis" not in readme
 
 
-def test_remove_formatter(cookies):
-    result = cookies.bake(extra_context={"add_formatter": "no"})
-
-    formatter = result.project.join("format_project.py")
-    formatter_docs = result.project.join(".format_docs.py")
-    pyproject = result.project.join("pyproject.toml")
-    tox = result.project.join("tox.ini").read()
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert formatter.check(exists=0)
-    assert formatter_docs.check(exists=0)
-    assert pyproject.check(exists=0)
-    assert "isort" not in tox
-    assert "black" not in tox
-
-
 @pytest.mark.skipif(
     sys.version_info[:2] != (3, 7),
     reason="Miniconda is only installed for Python 3.7",

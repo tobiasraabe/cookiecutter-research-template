@@ -35,4 +35,4 @@ repos:
     hooks:
     -   id: check-yaml
         name: check-yaml - Validating .yaml Files
-        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment).yml
+        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml

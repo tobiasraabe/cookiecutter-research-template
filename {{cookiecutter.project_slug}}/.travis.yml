@@ -17,8 +17,8 @@ install:
 
 script:
   - tox -e flake8
-{% if cookiecutter.add_formatter == "yes" %}  - tox -e black
-  - tox -e isort{% endif %}
+  - tox -e black
+  - tox -e isort
   - tox -e docs
   - tox -e sphinx
 
