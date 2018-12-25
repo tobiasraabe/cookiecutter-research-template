@@ -28,17 +28,35 @@ files, run
     $ python waf.py distclean configure
 
 
-Formatting
-^^^^^^^^^^
+Quality Checks
+^^^^^^^^^^^^^^
 
-Making the code readable is as easy as typing
+The quality of the code base is ensured by `pre-commit-hooks
+<https://pre-commit.com>`_  which are automatically executed before changes are
+committed. If a check fails, the commit is aborted. To install the hooks, type
 
 .. code-block:: bash
 
-    $ python format_python_files.py
+    $ pre-commit install
 
-and all the files will be formatted according to the configuration of ``black``
-and ``isort``.
+After that, run
+
+.. code-block:: bash
+
+    $ pre-commit run --all-files
+
+to execute the checks without making a commit. Currently, the following hooks
+are installed:
+
+- `black - The Uncomprimising Python Formatter
+  <https://github.com/ambv/black>`_
+- `blacken-docs - Black for Documentation
+  <https://github.com/asottile/blacken-docs>`_
+- `flake8 - Linting <https://gitlab.com/pycqa/flake8>`_
+- `isort - Sorting Python Imports <https://github.com/timothycrosley/isort>`_
+- `doc8 <https://github.com/openstack/doc8>`_
+- `check-yaml - Validating .yaml files
+  <https://github.com/pre-commit/pre-commit-hooks>`_
 
 
 Testing
