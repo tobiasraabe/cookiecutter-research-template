@@ -50,11 +50,10 @@ to keep it your way, insert ``skip-string-normalization = true`` in the
 ``pyproject.toml``.
 
 
-`isort <https://github.com/timothycrosley/isort>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-isort sorts your imports alphabetically and into sections, so that you do not
-have to do it.
+This tool reorders import statements for better readibility.
 
 
 Linters

@@ -90,8 +90,10 @@ Testing with `tox <https://github.com/tox-dev/tox>`_
 
         $ tox
 
-Code Formatting with `black <https://github.com/ambv/black>`_ and `isort <https://github.com/timothycrosley/isort>`_
-    Both tools will quickly improve the code quality of your project. Just run
+Code Formatting with `black <https://github.com/ambv/black>`_ and
+    `reorder-python-imports
+    <https://github.com/asottile/reorder_python_imports>`_ Both tools will
+    quickly improve the code quality of your project. Just run
 
     .. code-block:: bash
 
