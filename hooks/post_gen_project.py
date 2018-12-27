@@ -1,5 +1,4 @@
 import os
-
 from pathlib import Path
 
 PROJECT_DIRECTORY = Path.cwd()

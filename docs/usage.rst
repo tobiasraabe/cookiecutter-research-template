@@ -53,7 +53,8 @@ are installed:
 - `blacken-docs - Black for Documentation
   <https://github.com/asottile/blacken-docs>`_
 - `flake8 - Linting <https://gitlab.com/pycqa/flake8>`_
-- `isort - Sorting Python Imports <https://github.com/timothycrosley/isort>`_
+- `reorder-python-imports
+  <https://github.com/asottile/reorder_python_imports>`_
 - `doc8 <https://github.com/openstack/doc8>`_
 - `check-yaml - Validating .yaml files
   <https://github.com/pre-commit/pre-commit-hooks>`_

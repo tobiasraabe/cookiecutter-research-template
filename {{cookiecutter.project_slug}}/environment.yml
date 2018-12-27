@@ -22,11 +22,10 @@ dependencies:
     - flake8-print==3.1.0
     - flake8-quotes==1.0.0
     - flake8-todo==0.7{% endif %}
-    - isort==4.3.4
     - matplotlib==2.2.2
     - nbsphinx==0.3.3
-{% if cookiecutter.add_tox == "yes" %}    - pep8-naming==0.7.0
-    - pybtex==0.21{% endif %}
+{% if cookiecutter.add_tox == "yes" %}    - pep8-naming==0.7.0{% endif %}
+    - pybtex==0.21
     - pytest==3.7.1
     - pytest-cov==2.5.1
     - pytest-pythonpath==0.7.2

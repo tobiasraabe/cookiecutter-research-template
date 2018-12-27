@@ -1,11 +1,10 @@
 import hashlib
-
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict
+from typing import List
 
 import click
 import requests
-
 from tqdm import tqdm
 
 CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}

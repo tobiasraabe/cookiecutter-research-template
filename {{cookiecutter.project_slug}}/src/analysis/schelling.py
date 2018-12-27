@@ -6,15 +6,12 @@ argument. The model name must correspond to a file called
 ``[model_name].json`` in the "IN_MODEL_SPECS" directory.
 
 """
-
-
 import json
 import logging
 import pickle
 import sys
 
 import numpy as np
-
 from bld.project_paths import project_paths_join as ppj
 from src.model_code.agent import Agent
 

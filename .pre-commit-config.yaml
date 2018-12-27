@@ -1,5 +1,16 @@
 exclude: \.mywaflib
 repos:
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v1.3.4
+    hooks:
+    -   id: reorder-python-imports
+        files: '(\.py|wscript)$'
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.0.0
+    hooks:
+    -   id: check-yaml
+        name: check-yaml - Validating .yaml Files
+        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml
 -   repo: local
     hooks:
     - id: black
@@ -18,21 +29,9 @@ repos:
       language: system
       entry: flake8 - Linting
       types: [python]
-    - id: isort
-      name: isort - Sorting Python Imports
-      language: system
-      entry: isort
-      args: [--settings-path=tox.ini]
-      files: '(\.py|wscript)$'
     - id: doc8
       name: doc8
       entry: doc8
       language: system
       files: '\.(rst|md|markdown)'
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.0.0
-    hooks:
-    -   id: check-yaml
-        name: check-yaml - Validating .yaml Files
-        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml
