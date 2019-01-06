@@ -87,8 +87,6 @@ def test_check_conda_environment_creation(cookies):
     assert result.exit_code == 0
     assert result.exception is None
 
-    print(platform.system())  # noqa: T001
-    print(os.getcwd())  # noqa: T001
     os.system("conda info -a")  # noqa: T001
 
     if platform.system() == "Windows":
@@ -97,6 +95,5 @@ def test_check_conda_environment_creation(cookies):
         os.system("source activate test")
 
     os.system("conda info -a")  # noqa: T001
-    os.system("python -h")  # noqa: T001
 
-    assert sys.prefix.split(os.path.sep)[-1] == "test"
+    assert os.environ["CONDA_DEFAULT_ENV"] == "test"
