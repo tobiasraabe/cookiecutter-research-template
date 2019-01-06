@@ -64,7 +64,8 @@ To delete the environment, type
 Enforce quality checks befire every commit
 ------------------------------------------
 
-You can automatically enforce quality checks before every commit by using ``pre-commit``. Run
+You can automatically enforce quality checks before every commit by using
+``pre-commit``. Run
 
 .. code-block:: bash
 
