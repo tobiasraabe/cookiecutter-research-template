@@ -73,9 +73,15 @@ local development. Please note this documentation assumes you already have
 
    .. code-block:: bash
 
-       $ conda env create -n cc python=3.6 -f requirements.txt
+       $ conda env create -n cc -f environment.yml
 
-4. Create a branch for local development:
+4. Install automatic quality checks with pre-commit by running
+
+   .. code-block:: bash
+
+       pre-commit install
+
+5. Create a branch for local development:
 
    .. code-block:: bash
 
@@ -83,7 +89,7 @@ local development. Please note this documentation assumes you already have
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes are well formatted
+6. When you're done making changes, check that your changes are well formatted
    and pass other checks. The easiest way is to run the formatters and then
    tox with
 
@@ -92,10 +98,10 @@ local development. Please note this documentation assumes you already have
        $ python format_python_files.py
        $ tox
 
-6. If your contribution is a bug fix or new feature, you may want to add a test
+7. If your contribution is a bug fix or new feature, you may want to add a test
    to the existing test suite. See section Add a New Test below for details.
 
-7. Commit your changes and push your branch to GitHub:
+8. Commit your changes and push your branch to GitHub:
 
    .. code-block:: bash
 
@@ -104,7 +110,7 @@ local development. Please note this documentation assumes you already have
      $ git push origin name-of-your-bugfix-or-feature
 
 
-8. Submit a pull request through the GitHub website.
+9. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 ^^^^^^^^^^^^^^^^^^^^^^^

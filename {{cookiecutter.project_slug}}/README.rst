@@ -24,10 +24,12 @@
 
 {{ cookiecutter.project_short_description }}
 
+
 Todo
 ----
 
 - [ ] Make this project better
+
 
 Managing the environment
 ------------------------
@@ -57,6 +59,26 @@ To delete the environment, type
 .. code-block:: bash
 
     $ conda env remove -n <env-name>
+
+
+Enforce quality checks befire every commit
+------------------------------------------
+
+You can automatically enforce quality checks before every commit by using
+``pre-commit``. Run
+
+.. code-block:: bash
+
+    pre-commit install
+
+to install the checks and
+
+.. code-block:: bash
+
+    pre-commit run
+
+to run the checks manually.
+
 
 Credits
 -------

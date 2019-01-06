@@ -9,6 +9,5 @@ def build(ctx):
 
     ctx(
         rule="pytest ../src/data_management --no-cov",
-        # deps=[],
         name="test_data_management",
     )
