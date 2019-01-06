@@ -10,8 +10,6 @@ branches:
 
 environment:
   matrix:
-    # - MINICONDA: "C:\\Miniconda35"
-    - MINICONDA: "C:\\Miniconda35-x64"
     # - MINICONDA: "C:\\Miniconda36"
     - MINICONDA: "C:\\Miniconda36-x64"
     # - MINICONDA: "C:\\Miniconda37"

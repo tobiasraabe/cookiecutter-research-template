@@ -6,7 +6,6 @@ notifications:
 language: python
 
 python:
-  - "3.5"
   - "3.6"
   - "3.7-dev"
 
@@ -32,9 +31,6 @@ matrix:
 install:
   - pip install -U tox-travis
   - bash install_miniconda.sh
-  - ls /home/travis/miniconda
-  - ls /home/travis/miniconda/bin
-  - ls /home/travis/miniconda/lib/python3.7/site-packages/conda
 
 script: tox
 

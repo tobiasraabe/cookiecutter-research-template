@@ -1,5 +1,3 @@
-import os
-import platform
 import sys
 
 import pytest
@@ -86,14 +84,3 @@ def test_check_conda_environment_creation(cookies):
 
     assert result.exit_code == 0
     assert result.exception is None
-
-    os.system("conda info -a")  # noqa: T001
-
-    if platform.system() == "Windows":
-        os.system("activate test")
-    else:
-        os.system("source activate test")
-
-    os.system("conda info -a")  # noqa: T001
-
-    assert os.environ["CONDA_DEFAULT_ENV"] == "test"
