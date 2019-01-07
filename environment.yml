@@ -36,6 +36,6 @@ dependencies:
     - sphinx==1.8.3
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.2
-    - sphinxcontrib-bibtex==0.4.1
+    - sphinxcontrib-bibtex==0.4.2
     - tqdm==4.28.1
     - tox==3.6.1
