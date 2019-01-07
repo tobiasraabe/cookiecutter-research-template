@@ -31,7 +31,7 @@ dependencies:
     - pre-commit==1.13.0
     - pybtex==0.22.0
     - pytest==4.1.0
-    - pytest-cov==2.6.0
+    - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
     - sphinx==1.8.3
     - sphinx-autobuild==0.7.1
