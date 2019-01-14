@@ -30,7 +30,7 @@ dependencies:
     - pep8-naming==0.7.0
     - pre-commit==1.14.2
     - pybtex==0.22.0
-    - pytest==4.0.2
+    - pytest==4.1.1
     - pytest-cov==2.6.0
     - pytest-pythonpath==0.7.3
     - sphinx==1.8.3
