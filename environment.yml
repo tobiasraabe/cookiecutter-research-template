@@ -28,7 +28,7 @@ dependencies:
     - matplotlib==3.0.2
     - nbsphinx==0.4.1
     - pep8-naming==0.7.0
-    - pre-commit==1.13.0
+    - pre-commit==1.14.2
     - pybtex==0.22.0
     - pytest==4.0.2
     - pytest-cov==2.6.0
