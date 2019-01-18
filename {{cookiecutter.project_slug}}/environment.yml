@@ -1,3 +1,4 @@
+name: {{ cookiecutter.conda_environment_name }}
 channels:
   - defaults
   - pscondaenvs
@@ -6,10 +7,10 @@ dependencies:
   - pandas=0.23.3
   - pscondaenvs=1.2.4
   - python={{ cookiecutter.python_version }}
-  - python-graphviz=0.8.2
+  - python-graphviz=0.8.4
   - pip:
     - black==18.9b0
-    - click==7.0
+{% if cookiecutter.add_downloader == "yes" or cookiecutter.add_cleaner == "yes" %}    - click==7.0{% endif %}
 {% if cookiecutter.add_tox == "yes" %}    - doc8==0.8.0
     - flake8==3.6.0
     - flake8-bugbear==18.8.0
@@ -28,14 +29,14 @@ dependencies:
     - matplotlib==3.0.2
     - nbsphinx==0.4.1
 {% if cookiecutter.add_tox == "yes" %}    - pep8-naming==0.7.0{% endif %}
-    - pre-commit==1.13.0
+    - pre-commit==1.14.2
     - pybtex==0.22.0
-    - pytest==4.0.2
-    - pytest-cov==2.6.0
+    - pytest==4.1.1
+    - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
-    - sphinx==1.8.2
+    - sphinx==1.8.3
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.2
     - sphinxcontrib-bibtex==0.4.1
-{% if cookiecutter.add_downloader == "yes" %}    - tqdm==4.28.1{% endif %}
-{% if cookiecutter.add_tox == "yes" %}    - tox==3.6.1{% endif %}
+{% if cookiecutter.add_downloader == "yes" %}    - tqdm==4.29.1{% endif %}
+{% if cookiecutter.add_tox == "yes" %}    - tox==3.7.0{% endif %}
