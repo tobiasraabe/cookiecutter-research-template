@@ -13,11 +13,8 @@
     :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 {% endif %}
-
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black
-
-{{ cookiecutter.project_short_description }}
 
 
 Todo

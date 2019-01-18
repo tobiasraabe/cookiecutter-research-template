@@ -5,7 +5,6 @@
   "project_name": "Reproducible Research Template",
   "github_username": "{{ cookiecutter.author.lower().replace(' ', '') }}",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_short_description": "Template for reproducible research.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
   "python_version": "3.6",
