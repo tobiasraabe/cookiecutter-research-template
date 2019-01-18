@@ -6,8 +6,8 @@ dependencies:
   - jupyterlab=0.32.1
   - pandas=0.23.3
   - pscondaenvs=1.2.4
-  - python=3.6
-  - python-graphviz=0.8.2
+  - python=3.7
+  - python-graphviz=0.8.4
   - pip:
     - black==18.9b0
     - click==7.0
