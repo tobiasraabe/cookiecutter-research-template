@@ -1,3 +1,4 @@
+name: {{ cookiecutter.conda_environment_name }}
 channels:
   - defaults
   - pscondaenvs

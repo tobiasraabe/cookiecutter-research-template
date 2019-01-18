@@ -43,7 +43,10 @@ if __name__ == "__main__":  # noqa: C901
     if "{{ cookiecutter.add_readthedocs }}" == "no":
         remove_file("readthedocs.yml")
 
-    if "{{ cookiecutter.create_conda_environment_at_finish }}" == "yes":
+    if (
+        "{{ cookiecutter.create_conda_environment_at_finish }}" == "yes"
+        and "{{ cookiecutter.python_version }}"[:3] != "3.7"
+    ):
         os.system(
             "conda env create "
             "--file environment.yml "

@@ -66,6 +66,11 @@ want, stick to the default answer. You can fetch it later by running
 
     $ conda env create -f environment.yml -n <env-name>
 
+.. warning::
+
+    Unfortunately, ``python-graphviz`` does not support Python 3.7. Therefore,
+    the environment is not automatically created even if specified.
+
 Happy research!
 
 
