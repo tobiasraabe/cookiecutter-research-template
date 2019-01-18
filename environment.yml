@@ -28,14 +28,14 @@ dependencies:
     - matplotlib==3.0.2
     - nbsphinx==0.4.1
     - pep8-naming==0.7.0
-    - pre-commit==1.13.0
+    - pre-commit==1.14.2
     - pybtex==0.22.0
-    - pytest==4.0.2
-    - pytest-cov==2.6.0
+    - pytest==4.1.1
+    - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
     - sphinx==1.8.3
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.2
-    - sphinxcontrib-bibtex==0.4.1
-    - tqdm==4.28.1
-    - tox==3.6.1
+    - sphinxcontrib-bibtex==0.4.2
+    - tqdm==4.29.1
+    - tox==3.7.0
