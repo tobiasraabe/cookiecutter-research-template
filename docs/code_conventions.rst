@@ -1,5 +1,5 @@
 Code Conventions
-----------------
+================
 
 Code conventions are rules to follow during coding to prevent mistakes and
 ensure readability. The last point is crucial and cannot be stressed enough.
@@ -17,14 +17,14 @@ this goal.
 
 
 Formatters
-^^^^^^^^^^
+----------
 
 Formatters are tools which take the code and transform it to something else
 without influencing the way the code works.
 
 
 `Black <https://github.com/ambv/black>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Black is relatively new in the Python ecosystem and calls itself the
 uncompromising Python code formatter. The slogan is true. There are almost no
@@ -51,13 +51,13 @@ to keep it your way, insert ``skip-string-normalization = true`` in the
 
 
 `reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tool reorders import statements for better readibility.
 
 
 Linters
-^^^^^^^
+-------
 
 To lint a file means to check the file for errors. The errors can be stylistic
 errors, warning if you do not follow code conventions, etc.. One example is
@@ -82,7 +82,7 @@ flake8 in its implemented version will show the following error messages:
 
 
 `flake8 <https://github.com/pycqa/flake8>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 flake8 is common tool to lint Python files. It does not only recognize
 stylistic issues which should be fixed with Black anyway, but it also makes
@@ -91,14 +91,14 @@ and more.
 
 
 `doc8 <https://github.com/openstack/doc8>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 doc8 helps you to avoid errors in restructured-text files which are hard to
 debug using the sphinx error log.
 
 
 `restructuredtext_lint <https://github.com/twolfson/restructuredtext-lint>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tool validates your ``README.rst`` in case you want to publish your
 project as a package on PyPI.

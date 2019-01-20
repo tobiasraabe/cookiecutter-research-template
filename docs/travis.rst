@@ -1,5 +1,5 @@
 Travis-CI
----------
+=========
 
 Travis-CI is a service which allows you to test and deploy your projects. We
 are only interested in the first aspect, testing, as Travis-CI allows us to run
@@ -20,7 +20,7 @@ under the former constraint and can be given into the hands of private company.
 
 
 Installation
-^^^^^^^^^^^^
+------------
 
 To enable testing on travis-ci.com, go to https://travis-ci.com and choose log
 in with Github in the upper right corner. Then, you have to agree that

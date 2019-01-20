@@ -34,10 +34,12 @@ reproducible research.
     pyup
     travis
     code_conventions
+    documentation
 
 .. toctree::
     :maxdepth: 1
     :hidden:
     :caption: Additional Information
 
+    todo
     contributing

@@ -1,4 +1,3 @@
-{% for _ in cookiecutter.project_name %}={% endfor %}
 {{ cookiecutter.project_name }}
 {% for _ in cookiecutter.project_name %}={% endfor %}
 
@@ -17,10 +16,8 @@
     :target: https://github.com/ambv/black
 
 
-Todo
-----
-
-- [ ] Make this project better
+`TODO <src/documentation/TODO.rst>`_
+------------------------------------
 
 
 Managing the environment
