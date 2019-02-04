@@ -10,7 +10,7 @@ dependencies:
     - black==18.9b0
     - click==7.0
     - doc8==0.8.0
-    - flake8==3.7.3
+    - flake8==3.7.5
     - flake8-bugbear==18.8.0
     - flake8-builtins==1.4.1
     - flake8-commas==2.0.0
