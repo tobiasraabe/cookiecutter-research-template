@@ -1,4 +1,4 @@
-* Date you used {{ cookiecutter.project_title }}:
+* Date you used {{ cookiecutter.project_name }}:
 * Version used, if any:
 * Python version, if any:
 * Operating System:
