@@ -28,7 +28,7 @@ dependencies:
     - nbsphinx==0.4.2
     - pandas==0.24.1
     - pep8-naming==0.8.1
-    - pre-commit==1.14.2
+    - pre-commit==1.14.3
     - pybtex==0.22.2
     - pytest==4.2.0
     - pytest-cookies==0.3.0
