@@ -53,7 +53,7 @@ to keep it your way, insert ``skip-string-normalization = true`` in the
 `reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This tool reorders import statements for better readibility.
+This tool reorders import statements for better readability.
 
 
 Linters

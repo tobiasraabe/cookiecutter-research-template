@@ -89,13 +89,11 @@ local development. Please note this documentation assumes you already have
 
    Now you can make your changes locally.
 
-6. When you're done making changes, check that your changes are well formatted
-   and pass other checks. The easiest way is to run the formatters and then
-   tox with
+6. When you're done making changes, check that your changes pass the defined
+   tests.
 
    .. code-block:: bash
 
-       $ python format_python_files.py
        $ tox
 
 7. If your contribution is a bug fix or new feature, you may want to add a test

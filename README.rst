@@ -67,6 +67,14 @@ want, stick to the default answer. You can fetch it later by running
 
     $ conda env create -f environment.yml -n <env-name>
 
+At last, type
+
+.. code-block:: bash
+
+    $ (source) activate <env-name>
+
+on Windows (Linux, MacOS).
+
 Happy research!
 
 
