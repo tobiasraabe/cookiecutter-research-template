@@ -1,5 +1,5 @@
 Contributing
-------------
+============
 
 Contributions are welcome, and they are greatly appreciated! Every
 little bit helps, and credit will always be given.
@@ -7,10 +7,10 @@ little bit helps, and credit will always be given.
 You can contribute in many ways:
 
 Types of Contributions
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 Report Bugs
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Report bugs at
 https://github.com/tobiasraabe/cookiecutter-research-template/issues
@@ -22,26 +22,26 @@ If you are reporting a bug, please include:
 * Detailed steps to reproduce the bug.
 
 Fix Bugs
-~~~~~~~~
+^^^^^^^^
 
 Look through the GitHub issues for bugs. Anything tagged with "bug"
 and "help wanted" is open to whoever wants to implement a fix for it.
 
 Implement Features
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Look through the GitHub issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
 Write Documentation
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 The cookiecutter could always use more documentation, whether as part of the
 official docs, in docstrings, or even on the web in blog posts, articles, and
 such.
 
 Submit Feedback
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 The best way to send feedback is to file an issue at
 https://github.com/tobiasraabe/cookiecutter-research-template/issues.
@@ -54,7 +54,7 @@ If you are proposing a new feature:
   are welcome :)
 
 Get Started!
-^^^^^^^^^^^^
+------------
 
 Ready to contribute? Here's how to set up `cookiecutter-research-template` for
 local development. Please note this documentation assumes you already have
@@ -89,13 +89,11 @@ local development. Please note this documentation assumes you already have
 
    Now you can make your changes locally.
 
-6. When you're done making changes, check that your changes are well formatted
-   and pass other checks. The easiest way is to run the formatters and then
-   tox with
+6. When you're done making changes, check that your changes pass the defined
+   tests.
 
    .. code-block:: bash
 
-       $ python format_python_files.py
        $ tox
 
 7. If your contribution is a bug fix or new feature, you may want to add a test
@@ -113,7 +111,7 @@ local development. Please note this documentation assumes you already have
 9. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Before you submit a pull request, check that it meets these guidelines:
 
@@ -128,7 +126,7 @@ Before you submit a pull request, check that it meets these guidelines:
    if the tests are failing.
 
 Add a New Test
-^^^^^^^^^^^^^^
+--------------
 
 When fixing a bug or adding features, it's good practice to add a test to
 demonstrate your fix or new feature behaves as expected. These tests should

@@ -1,5 +1,5 @@
 Installation
-------------
+============
 
 This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template.
 To use it, you need to install ``cookiecutter`` by running

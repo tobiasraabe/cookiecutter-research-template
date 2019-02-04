@@ -5,7 +5,8 @@
     | <b><a href="https://cookiecutter-research-template.readthedocs.io/en/latest/index.html">Documentation</a></b>
     |
 
-    <h1>cookiecutter-research-template</h1>
+cookiecutter-research-template
+==============================
 
 .. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
@@ -66,6 +67,14 @@ want, stick to the default answer. You can fetch it later by running
 
     $ conda env create -f environment.yml -n <env-name>
 
+At last, type
+
+.. code-block:: bash
+
+    $ (source) activate <env-name>
+
+on Windows (Linux, MacOS).
+
 Happy research!
 
 
@@ -101,10 +110,7 @@ Code Formatting with `black <https://github.com/ambv/black>`_ and
 
     .. code-block:: bash
 
-        $ python format_python_files.py
-
-    and black will improve your code whereas isort will change the order of
-    imports in a more readable way.
+        $ pre-commit run --all-files.
 
 Linting
     Linting is the process of checking the syntax in code or documentation
@@ -175,7 +181,7 @@ Cleaning the project
 
 Visualization of the DAG
     A graphic of the DAG is compiled at the end of the Waf build process and
-    serves as a nice picture of the complexity of the project (a little bit
+    serves as a nice picture of the complexity of the project (a little bit of
     bragging is ok :wink:) or allows for visual debugging.
 
     .. raw:: html

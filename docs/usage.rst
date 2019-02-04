@@ -1,10 +1,10 @@
 Usage
------
+=====
 
 After the installation, here is the manual for running the project.
 
 Waf
-^^^
+---
 
 The general research project must be configured in advance with
 
@@ -29,7 +29,7 @@ files, run
 
 
 Quality Checks
-^^^^^^^^^^^^^^
+--------------
 
 The quality of the code base is ensured by `pre-commit-hooks
 <https://pre-commit.com>`_  which are automatically executed before changes are
@@ -61,7 +61,7 @@ are installed:
 
 
 Testing
-^^^^^^^
+-------
 
 Before committing changes, make sure that everything works fine. Run
 

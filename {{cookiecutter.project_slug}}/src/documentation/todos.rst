@@ -1,5 +1,3 @@
-*****
-Todos
-*****
+.. include:: ../../TODO.rst
 
 .. todolist::
