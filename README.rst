@@ -5,8 +5,7 @@
     | <b><a href="https://cookiecutter-research-template.readthedocs.io/en/latest/index.html">Documentation</a></b>
     |
 
-cookiecutter-research-template
-==============================
+    <h1>cookiecutter-research-template</h1>
 
 .. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
     :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
