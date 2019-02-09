@@ -1,4 +1,10 @@
+import os
 import sys
+
+import pytest
+
+is_travis = "TRAVIS" in os.environ
+is_appveyor = "APPVEYOR" in os.environ
 
 
 def test_bake_project(cookies):
@@ -68,6 +74,10 @@ def test_remove_travis(cookies):
     assert "travis" not in readme
 
 
+@pytest.mark.skipif(
+    not (is_travis or is_appveyor),
+    reason="Conda environment is only created on CI service.",
+)
 def test_check_conda_environment_creation(cookies):
     result = cookies.bake(
         extra_context={

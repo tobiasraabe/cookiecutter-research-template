@@ -31,7 +31,7 @@ install:
   - conda info -a
   - easy_install -U pip
   - pip install tox
-  - python -c "import os; print(os.environ)"
+  - python -c "import os; is_travis = 'TRAVIS' in os.environ; is_appveyor = 'APPVEYOR' in os.environ; print(is_travis); print(is_appveyor)"
 
 build: false
 
