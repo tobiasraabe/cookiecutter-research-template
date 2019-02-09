@@ -31,7 +31,6 @@ matrix:
 install:
   - pip install -U tox-travis
   - bash install_miniconda.sh
-  - python -c "import os; is_travis = 'TRAVIS' in os.environ; is_appveyor = 'APPVEYOR' in os.environ; print(is_travis); print(is_appveyor); print(not (is_travis or is_appveyor))"
 
 
 script: tox
