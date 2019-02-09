@@ -31,6 +31,8 @@ matrix:
 install:
   - pip install -U tox-travis
   - bash install_miniconda.sh
+  - python -c "import os; print(os.environ)"
+
 
 script: tox
 

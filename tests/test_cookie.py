@@ -1,10 +1,4 @@
-import os
 import sys
-
-import pytest
-
-
-is_continuous_integration = "TRAVIS" in os.environ or "APPVEYOR" in os.environ
 
 
 def test_bake_project(cookies):
@@ -74,10 +68,6 @@ def test_remove_travis(cookies):
     assert "travis" not in readme
 
 
-@pytest.mark.skipif(
-    not is_continuous_integration,
-    reason="A conda environment should only be created on CI server.",
-)
 def test_check_conda_environment_creation(cookies):
     result = cookies.bake(
         extra_context={
