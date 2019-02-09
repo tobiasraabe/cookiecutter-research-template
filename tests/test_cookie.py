@@ -72,12 +72,8 @@ def test_remove_travis(cookies):
 
 
 @pytest.mark.skipif(
-    sys.version_info[:2] != (3, 7),
-    reason="Miniconda is only installed for Python 3.7",
-)
-@pytest.mark.skipif(
-    os.environ.get("TRAVIS", "false") != "true",
-    reason="The environment is only created on Travis-CI.",
+    "TRAVIS" not in os.environ and "APPVEYOR" not in os.environ,
+    reason="Conda environment is only created on CI service.",
 )
 def test_check_conda_environment_creation(cookies):
     result = cookies.bake(

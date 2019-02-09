@@ -16,7 +16,7 @@ os:
             # work, so we include them explicitly below (see "matrix: include:
             # ..." below). They only seem to work with the xcode8.3 image, and
             # not the newer ones. Thus we will leave this in, until it breaks
-            # one day, at which point we will probably reomve testing on OSX if
+            # one day, at which point we will probably remove testing on OSX if
             # it is not supported then.
 
 matrix:
@@ -31,6 +31,7 @@ matrix:
 install:
   - pip install -U tox-travis
   - bash install_miniconda.sh
+
 
 script: tox
 
