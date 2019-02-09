@@ -30,7 +30,8 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda info -a
   - easy_install -U pip
-  - pip install tox
+  - conda env update -f environment.yml
+  - pytest
 
 build: false
 
