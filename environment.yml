@@ -27,16 +27,16 @@ dependencies:
     - matplotlib==3.0.2
     - nbsphinx==0.4.2
     - pandas==0.24.1
-    - pep8-naming==0.8.1
-    - pre-commit==1.14.3
+    - pep8-naming==0.8.2
+    - pre-commit==1.14.4
     - pybtex==0.22.2
-    - pytest==4.2.0
+    - pytest==4.2.1
     - pytest-cookies==0.3.0
     - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
     - sphinx==1.8.4
     - sphinx-autobuild==0.7.1
-    - sphinx-rtd-theme==0.4.2
+    - sphinx-rtd-theme==0.4.3
     - sphinxcontrib-bibtex==0.4.2
-    - tqdm==4.30.0
+    - tqdm==4.31.1
     - tox==3.7.0
