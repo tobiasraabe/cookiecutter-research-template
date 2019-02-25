@@ -1,37 +1,52 @@
 exclude: \.mywaflib
 repos:
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v1.3.4
+    rev: v1.3.5
     hooks:
     -   id: reorder-python-imports
         files: '(\.py|wscript)$'
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.0.0
+    rev: v2.1.0
     hooks:
     -   id: check-yaml
         name: check-yaml - Validating .yaml Files
         exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.6
+    hooks:
+    - id: flake8
+      name: flake8
+      language: system
+      entry: flake8 - Linting
+      files: '(\.py|wscript)$'
+      additional_dependencies: [
+        flake8-bugbear, flake8-builtins, flake8-commas, flake8-comprehensions,
+        flake8-deprecated, flake8-docstrings, flake8-eradicate, flake8-print,
+        flake8-quotes, flake8-rst-docstrings, flake8-todo, flake8-type-annotations,
+        pep8-naming
+      ]
 -   repo: local
     hooks:
     - id: black
       name: Black - The Uncompromising Code Formatter
       language: system
       entry: black
-      files: '(\.pyi?|wscript)$'
+      files: '(\.py|wscript)$'
     - id: blacken-docs
       name: blacken-docs - Black for Documentation
       entry: blacken-docs
       language: system
-      files: '\.(rst|md|markdown)'
-      args: [--line-length=79, --py36]
-    - id: flake8
-      name: flake8
-      language: system
-      entry: flake8 - Linting
-      types: [python]
+      types: [markdown, rst]
+      args: [--line-length=88, --py36]
     - id: doc8
       name: doc8
       entry: doc8
       language: system
-      files: '\.(rst|md|markdown)'
+      types: [markdown, rst]
+      exclude: \{\{cookiecutter.project_slug\}\}/README.rst
+    - id: restructuredtext-lint
+      entry: rst-lint
+      language: system
+      name: restructuredtext-lint - Check README.rst to be PyPi-compliant.
+      files: '(README.rst)'
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
