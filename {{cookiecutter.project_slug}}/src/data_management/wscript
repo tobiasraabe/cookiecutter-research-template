@@ -7,7 +7,4 @@ def build(ctx):
         name="get_simulation_draws",
     )
 
-    ctx(
-        rule="pytest ../src/data_management --no-cov",
-        name="test_data_management",
-    )
+    ctx(rule="pytest ../src/data_management --no-cov", name="test_data_management")
