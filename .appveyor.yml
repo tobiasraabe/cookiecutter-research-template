@@ -4,7 +4,6 @@ notifications:
     on_build_success: false
     on_build_status_changed: false
 
-# Do not build feature branch with open Pull Requests
 skip_branch_with_pr: true
 
 environment:
