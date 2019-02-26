@@ -19,6 +19,7 @@ dependencies:
     - pytest-cookies==0.3.0
     - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
+    - restructuredtext_lint==1.2.2
     - sphinx==1.8.4
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.3

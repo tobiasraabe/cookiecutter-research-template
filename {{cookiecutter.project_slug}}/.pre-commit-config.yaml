@@ -33,16 +33,13 @@ repos:
     hooks:
     -   id: black
         files: '(\.pyi?|wscript)$'
-        types: []
 -   repo: local
     hooks:
     - id: doc8
-      name: doc8
       entry: doc8
       language: system
       types: [markdown, rst]
     - id: restructuredtext-lint
       entry: rst-lint
       language: system
-      name: restructuredtext-lint - Check README.rst to be PyPi-compliant.
       files: '(README.rst)'
