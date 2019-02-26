@@ -17,14 +17,10 @@ def build(ctx):
             source="plot_locations.py",
             deps=[
                 ctx.path_to(ctx, "BLD", "matplotlibrc"),
-                ctx.path_to(
-                    ctx, "OUT_ANALYSIS", "schelling_{}.pickle".format(model)
-                ),
+                ctx.path_to(ctx, "OUT_ANALYSIS", "schelling_{}.pickle".format(model)),
                 ctx.path_to(ctx, "IN_MODEL_SPECS", "{}.json".format(model)),
             ],
-            target=ctx.path_to(
-                ctx, "OUT_FIGURES", "schelling_{}.png".format(model)
-            ),
+            target=ctx.path_to(ctx, "OUT_FIGURES", "schelling_{}.png".format(model)),
             append=model,
             name="plot_locations_{}".format(model),
         )

@@ -42,9 +42,7 @@ def downloader(file: Path, url: str, resume_byte_pos: int = None):
 
     # Append information to resume download at specific byte position
     # to header
-    resume_header = (
-        {"Range": f"bytes={resume_byte_pos}-"} if resume_byte_pos else None
-    )
+    resume_header = {"Range": f"bytes={resume_byte_pos}-"} if resume_byte_pos else None
 
     # Establish connection
     r = requests.get(url, stream=True, headers=resume_header)

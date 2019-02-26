@@ -15,14 +15,9 @@ def build(ctx):
                 ctx.path_to(ctx, "IN_MODEL_SPECS", "{}.json".format(model)),
             ],
             target=[
+                ctx.path_to(ctx, "OUT_ANALYSIS", "schelling_{}.pickle".format(model)),
                 ctx.path_to(
-                    ctx, "OUT_ANALYSIS", "schelling_{}.pickle".format(model)
-                ),
-                ctx.path_to(
-                    ctx,
-                    "OUT_ANALYSIS",
-                    "log",
-                    "schelling_{}.log".format(model),
+                    ctx, "OUT_ANALYSIS", "log", "schelling_{}.log".format(model)
                 ),
             ],
             append=model,

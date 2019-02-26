@@ -7,7 +7,6 @@ dependencies:
   - python=3.7
   - python-graphviz=0.8.4
   - pip:
-    - black==18.9b0
     - click==7.0
     - doc8==0.8.0
     - jupyterlab==0.35.4
@@ -20,6 +19,7 @@ dependencies:
     - pytest-cookies==0.3.0
     - pytest-cov==2.6.1
     - pytest-pythonpath==0.7.3
+    - restructuredtext_lint==1.2.2
     - sphinx==1.8.4
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.3

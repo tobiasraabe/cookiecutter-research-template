@@ -35,15 +35,11 @@ class Agent:
         # Create a sorted list of pairs (d, agent), where d is distance from
         # self
         distances = [
-            (self._get_distance(other), other)
-            for other in agents
-            if not self == other
+            (self._get_distance(other), other) for other in agents if not self == other
         ]
         distances.sort()
         # Extract the types of neighbouring agents
-        neighbour_types = [
-            other.type for d, other in distances[: self._n_neighbours]
-        ]
+        neighbour_types = [other.type for d, other in distances[: self._n_neighbours]]
         # Count how many neighbours have the same type as self
         n_same_type = sum(self.type == nt for nt in neighbour_types)
 

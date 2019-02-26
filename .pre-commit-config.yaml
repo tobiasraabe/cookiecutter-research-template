@@ -1,23 +1,20 @@
-exclude: \.mywaflib
+# Exclude every file or folder starting with a dot.
+exclude: ^[^\.].*$
 repos:
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v1.3.5
     hooks:
     -   id: reorder-python-imports
-        files: '(\.py|wscript)$'
+        files: '(\.pyi?|wscript)$'
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.1.0
     hooks:
     -   id: check-yaml
-        name: check-yaml - Validating .yaml Files
         exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.7
     hooks:
     - id: flake8
-      name: flake8
-      language: system
-      entry: flake8 - Linting
       files: '(\.py|wscript)$'
       additional_dependencies: [
         flake8-bugbear, flake8-builtins, flake8-commas, flake8-comprehensions,
@@ -36,22 +33,18 @@ repos:
     rev: 18.9b0
     hooks:
     -   id: black
-        name: black
-        description: 'Black: The uncompromising Python code formatter'
-        entry: black
-        files: '(\.py|wscript)$'
-        require_serial: true
+        files: '(\.pyi?|wscript)$'
 -   repo: local
     hooks:
     - id: doc8
-      name: doc8
       entry: doc8
       language: system
       types: [markdown, rst]
+      name: doc8 - Lint the documentation.
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
     - id: restructuredtext-lint
       entry: rst-lint
       language: system
-      name: restructuredtext-lint - Check README.rst to be PyPi-compliant.
       files: '(README.rst)'
+      name: restructuredtext-lint - Is the README PyPi-compliant?
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
