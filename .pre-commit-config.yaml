@@ -34,7 +34,6 @@ repos:
     hooks:
     -   id: black
         files: '(\.pyi?|wscript)$'
-        language_version: python3.7
 -   repo: local
     hooks:
     - id: doc8
