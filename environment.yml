@@ -7,7 +7,6 @@ dependencies:
   - python=3.7
   - python-graphviz=0.8.4
   - pip:
-    - black==18.9b0
     - click==7.0
     - doc8==0.8.0
     - jupyterlab==0.35.4

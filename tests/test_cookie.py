@@ -9,10 +9,7 @@ def test_bake_project(cookies):
     python_version = "{}.{}".format(major, minor)
 
     result = cookies.bake(
-        extra_context={
-            "project_slug": "helloworld",
-            "python_version": python_version,
-        }
+        extra_context={"project_slug": "helloworld", "python_version": python_version}
     )
 
     assert result.exit_code == 0

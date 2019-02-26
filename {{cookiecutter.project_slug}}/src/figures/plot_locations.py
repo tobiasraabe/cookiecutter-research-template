@@ -29,19 +29,9 @@ def plot_locations(locations_by_round, model_name):
         ax.tick_params(labelbottom=False, labelleft=False)
         ax.set_facecolor("azure")
         ax.plot(
-            locs[0][:, 0],
-            locs[0][:, 1],
-            "o",
-            markerfacecolor="orange",
-            **PLOT_ARGS,
+            locs[0][:, 0], locs[0][:, 1], "o", markerfacecolor="orange", **PLOT_ARGS
         )
-        ax.plot(
-            locs[1][:, 0],
-            locs[1][:, 1],
-            "o",
-            markerfacecolor="green",
-            **PLOT_ARGS,
-        )
+        ax.plot(locs[1][:, 0], locs[1][:, 1], "o", markerfacecolor="green", **PLOT_ARGS)
 
     fig.savefig(ppj("OUT_FIGURES", "schelling_{}.png".format(model_name)))
 

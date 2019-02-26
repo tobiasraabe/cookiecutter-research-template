@@ -7,7 +7,6 @@ dependencies:
   - python={{ cookiecutter.python_version }}
   - python-graphviz=0.8.4
   - pip:
-    - black==18.9b0
 {% if cookiecutter.add_downloader == "yes" or cookiecutter.add_cleaner == "yes" %}    - click==7.0{% endif %}
 {% if cookiecutter.add_tox == "yes" %}    - doc8==0.8.0
     - flake8==3.7.3

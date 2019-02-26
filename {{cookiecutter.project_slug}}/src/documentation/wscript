@@ -15,9 +15,7 @@ def post_install(ctx):
     for n in html_root.ant_glob("**", remove=False, quiet=True):
         rel_path = n.path_from(html_root)
         if not n.name.startswith(".") and not rel_path.startswith("."):
-            ctx.install_as(
-                os.path.join(install_root, rel_path), n, postpone=False
-            )
+            ctx.install_as(os.path.join(install_root, rel_path), n, postpone=False)
 
 
 def build(ctx):

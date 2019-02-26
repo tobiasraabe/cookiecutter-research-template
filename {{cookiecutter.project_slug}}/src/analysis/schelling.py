@@ -108,9 +108,7 @@ if __name__ == "__main__":
     )
 
     logging.basicConfig(
-        filename=ppj(
-            "OUT_ANALYSIS", "log", "schelling_{}.log".format(model_name)
-        ),
+        filename=ppj("OUT_ANALYSIS", "log", "schelling_{}.log".format(model_name)),
         filemode="w",
         level=logging.INFO,
     )
