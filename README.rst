@@ -112,30 +112,23 @@ Code Formatting with `black <https://github.com/ambv/black>`_ and
         $ pre-commit run --all-files.
 
 Linting
-    Linting is the process of checking the syntax in code or documentation
+    Linting is the process of validating the syntax in code or documentation
     files. This template offers three ways to lint your project.
 
     ``flake8`` and its extensions check your Python files for potential errors,
-    violations of naming conventions, ``TODO`` directives, etc.. Run this
-    selection of tests by using the ``-e`` flag and type
+    violations of naming conventions, ``TODO`` directives, etc.. To check your
+    documentation files and other ``.rst`` files in your project, use ``doc8`` and
+    ``restructuredtext-lint``. All three tests are included as pre-commits, but you can also run them with
 
     .. code-block:: bash
 
-        $ tox -e flake8
-
-
-    To check your documentation files and other ``.rst`` files in your project,
-    run
-
-    .. code-block:: bash
-
-        $ tox -e docs
+        $ pre-commit run flake8 doc8 restructuredtext-lint
 
     To test whether the documentation is built successfully, run
 
     .. code-block:: bash
 
-        $ tox -e sphinx
+        $ tox -e sphinx.
 
 Customizing matplotlib
     If you are tired to set the same old options like ``figsize=(12, 8)`` for
@@ -196,3 +189,6 @@ Others
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
     - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.
+    - `Anaconda on Windows
+      <https://cookiecutter-research-template.readthedocs.io/en/latest/
+      anaconda-on-windows.html>`_

@@ -33,7 +33,7 @@ reproducible research.
 
     pyup
     travis
-    code_conventions
+    code-conventions
     documentation
 
 .. toctree::
@@ -41,5 +41,6 @@ reproducible research.
     :hidden:
     :caption: Additional Information
 
+    anaconda-on-windows
     todo
     contributing
