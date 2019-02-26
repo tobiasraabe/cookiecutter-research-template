@@ -39,7 +39,9 @@ repos:
       entry: doc8
       language: system
       types: [markdown, rst]
+      name: doc8 - Lint the documentation.
     - id: restructuredtext-lint
       entry: rst-lint
       language: system
       files: '(README.rst)'
+      name: restructuredtext-lint - Is the README PyPi-compliant?
