@@ -1,13 +1,12 @@
 Anaconda on Windows
 ===================
 
-This cookiecutter is designed to work with `Anaconda <https://anaconda.org/>`_ , a
-scientific Python distribution for managing environments and packages. Especially for
-Windows users this made everything much easier as pre-compiled packages are distributed
-with Anaconda's own packages manager conda. However, the programming community is still
-extremely focused on use cases with Linux or MacOS and sometimes things get harder for
-us Windows users. Therefore, the following is a step-by-step installation and user guide
-for Anaconda on Windows.
+This cookiecutter is designed to work with `Anaconda <https://anaconda.org/>`_, a
+scientific Python distribution including its own package manager conda. Especially for
+Windows users this made a lot of things much easier as packages installed with conda are
+pre-compiled. However, the programming community is still extremely focused on use cases
+with Linux or MacOS and sometimes things get harder for us Windows users. Therefore, the
+following is a step-by-step installation and user guide for Anaconda on Windows.
 
 Installation
 ------------
@@ -21,7 +20,7 @@ Installation
    administrator privileges or for a single user. I prefer to install Python system-wide
    so it is available to all users. But then, you have to be careful as every time you
    interact with the base environment you have to use an elevated shell (a shell with
-   administrator privileges.)
+   administrator privileges as described `here <<https://www.digitalcitizen.life/ways-launch-powershell-windows-admin>`_>`_).
 
 3. Tick "Add Anaconda to my PATH environment variable" and also "Register Anaconda as my
    default Python 3.x". Finish installation.
@@ -29,12 +28,10 @@ Installation
 Which console?
 --------------
 
-The Powershell is the preferred way console on Windows as it provides a better interface
-and better tab-completion. Unlike CMD and "Anaconda Prompt" it is not really supported.
-The activation and deactivation of environments is broken. For that, we have to install
-an additional packages. If you installed Anaconda with administrator privileges, start a
-powershell as described `here
-<https://www.digitalcitizen.life/ways-launch-powershell-windows-admin>`_. Then, type
+The Powershell is the preferred way on Windows as it provides a better interface and
+better tab-completion. Unlike CMD and "Anaconda Prompt" it is not fully supported. The
+activation and deactivation of environments is broken. For that, we have to install an
+additional package. If you installed Anaconda with administrator privileges, start an elevated shell. Then, type
 
 .. code-block:: bash
 
@@ -44,14 +41,14 @@ How to interact with the base environment?
 ------------------------------------------
 
 The base environment is activated by default which means if you start a Powershell and
-type python, you use the Python interpreter and the packages from the base environment.
+type ``python``, you are using the Python interpreter and the packages from the base
+environment.
 
 My personal advice is to touch the base environment only if you want to do some small
 programming or prototyping. In all other cases, create a separate environment.
 
-The only two other things you can do here is to upgrade your base environment or conda.
-Start a Powershell (with administrator privileges if you installed Anaconda for all
-users). Type
+The only two other things you can do here is to conda or your base environment. Start a
+Powershell (with administrator privileges if you installed Anaconda for all users). Type
 
 .. code-block:: bash
 
@@ -76,6 +73,9 @@ Then, update Anaconda with
 How to interact with an environments?
 -------------------------------------
 
+Create environments
+^^^^^^^^^^^^^^^^^^^
+
 As I said before, I recommend to create a new environment for each of your projects. If
 you do not know which packages you need later, start with a plain Python environment and
 install packages along the way. Create a plain Python environment with
@@ -84,11 +84,14 @@ install packages along the way. Create a plain Python environment with
 
     $ conda create python=3.7 -c anaconda
 
-or from a file with
+or you can create an environment from a file with
 
 .. code-block:: bash
 
     $ conda env create -n <env-name> -f <path-to-yml>
+
+Manage packages
+^^^^^^^^^^^^^^^
 
 If you leave out the name, conda takes the name from the ``environment.yml``. If you
 leave out the file, conda looks for a ``environment.yml`` in the current folder.
@@ -101,9 +104,12 @@ To install a package type
 
 and to update
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-        $ conda update statsmodels
+      $ conda update statsmodels
+
+Export an environment
+^^^^^^^^^^^^^^^^^^^^^
 
 To make your projects reproducible, you have to define an ``environment.yml``.
 
@@ -142,11 +148,21 @@ sometimes distributing to Anaconda takes longer. Second, pyup can only inform yo
 updates under pip.
 
 If you export the environment, there is a second entry after each package installed with
-conda. The hashes make sure that packages have the same build instructions, but they are
-not only compiler but also OS-specific. Thus, you cannot install a hashed package on
-Windows and Linux.
+conda.
 
-What if you want to update the environment with a changed ``environment.yml``.
+.. code-block:: yaml
+
+    dependencies:
+      - vs2015_runtime=14.15.26706=h3a45250_0
+
+The hash, ``h3a45250_0``, makes sure that packages have the same build instructions, but
+they are not only compiler but also OS-specific. Thus, you cannot install a hashed
+package on Windows and Linux.
+
+Update an environment
+^^^^^^^^^^^^^^^^^^^^^
+
+What if you want to update the environment because you altered the ``environment.yml``?
 
 .. code-block:: bash
 
@@ -155,7 +171,8 @@ What if you want to update the environment with a changed ``environment.yml``.
 Again, you can leave out ``-n`` and ``-f`` if the name is specified in the file or if
 the file is in the current directory.
 
-To remove an environment, use
+Remove an environment
+^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
