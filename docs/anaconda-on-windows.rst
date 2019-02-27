@@ -31,11 +31,22 @@ Which console?
 The Powershell is the preferred way on Windows as it provides a better interface and
 better tab-completion. Unlike CMD and "Anaconda Prompt" it is not fully supported. The
 activation and deactivation of environments is broken. For that, we have to install an
-additional package. If you installed Anaconda with administrator privileges, start an elevated shell. Then, type
+`additional package <https://github.com/BCSharp/PSCondaEnvs>`_ . If you installed
+Anaconda with administrator privileges, start an elevated shell. Then, type
 
 .. code-block:: bash
 
     $ conda install pscondaenvs -c pscondaenvs
+
+Since Windows is extremely cautious, it does not want to execute the new
+``activate.ps1``. Thus, we need to change the execution policy in administrator mode
+with
+
+.. code-block:: bash
+
+    $ Set-ExecutionPolicy RemoteSigned
+
+and answer the following prompt with "Yes, for all" or ``a``.
 
 How to interact with the base environment?
 ------------------------------------------
