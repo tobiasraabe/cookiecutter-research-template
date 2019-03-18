@@ -40,6 +40,7 @@ code, therefore more comprehensible and reproducible research.
     :hidden:
     :caption: Additional Information
 
+    waf-tips-and-tricks
     anaconda-on-windows
     todo
     contributing
