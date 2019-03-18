@@ -3,10 +3,10 @@ Anaconda on Windows
 
 This cookiecutter is designed to work with `Anaconda <https://anaconda.org/>`_, a
 scientific Python distribution including its own package manager conda. Anaconda
-simplifies the usage and maintenance of python in particular for windows user. However,
+simplifies the usage and maintenance of python in particular for Windows user. However,
 the programming community is still extremely focused on use cases with Linux or MacOS
-and sometimes things get harder for us Windows users. Therefore, the following is a
-step-by-step installation and user guide for Anaconda on Windows.
+and neglect issues on Windows as these users should switch the OS anyway :). Therefore,
+the following is a step-by-step installation and user guide for Anaconda on Windows.
 
 Installation
 ------------
@@ -35,7 +35,7 @@ Installation
 4. Often times you have to manually add Anaconda to your PATH environment. You can find
    an instruction on how to do that `here
    <https://www.computerhope.com/issues/ch000549.htm>`_. If you installed Anaconda for
-   all users, the PATH should read something like ``C:\ProgramData\Anaconda3``.
+   all users, the ``PATH`` should read something like ``C:\ProgramData\Anaconda3``.
 
 Which console?
 --------------
@@ -74,7 +74,6 @@ with
     $ activate <env-name>
 
 and deactivate it with
-
 
 .. code-block:: bash
 
@@ -142,8 +141,8 @@ Then, update Anaconda with
 
     $ conda update anaconda
 
-How to interact with an environments?
--------------------------------------
+How to interact with environments?
+----------------------------------
 
 Create environments
 ^^^^^^^^^^^^^^^^^^^
@@ -161,6 +160,10 @@ or you can create an environment from a file with
 .. code-block:: bash
 
     $ conda env create -n <env-name> -f <path-to-yml>
+
+The environments are usually placed in your user folder under
+``C:\Users\<user-name>\.conda/envs/``, but I would not be surprised to find them
+elsewhere :).
 
 Manage packages
 ^^^^^^^^^^^^^^^

@@ -102,13 +102,15 @@ Quality checks on commits with `pre-commit <https://pre-commit.com>`_
     pre-commit runs checks before every commit and aborts the process if a violation is
     found.
 
-Code Formatting with `black <https://github.com/ambv/black>`_ and
-`reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
+Code Formatting with `black`_ and `reorder-python-imports`_
     Both tools will quickly improve the code quality of your project. Just run
 
     .. code-block:: bash
 
         $ pre-commit run --all-files.
+
+.. _black: https://github.com/ambv/black
+.. _reorder-python-imports: https://github.com/asottile/reorder_python_imports
 
 Linting
     Linting is the process of validating the syntax in code or documentation files. This
