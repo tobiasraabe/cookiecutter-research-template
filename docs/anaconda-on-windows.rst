@@ -20,7 +20,7 @@ Installation
    administrator privileges or for a single user. I prefer to install Python system-wide
    so it is available to all users. But then, you have to be careful as every time you
    interact with the base environment you have to use an elevated shell (a shell with
-   administrator privileges as described `here
+   administrator privileges as described `in this article
    <https://www.digitalcitizen.life/ways-launch-powershell-windows-admin>`_).
 
    .. warning::
