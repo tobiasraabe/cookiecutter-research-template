@@ -2,11 +2,11 @@ Anaconda on Windows
 ===================
 
 This cookiecutter is designed to work with `Anaconda <https://anaconda.org/>`_, a
-scientific Python distribution including its own package manager conda. Anaconda simplifies the 
-usage and maintenance of python in particular for windows user. However, the programming 
-community is still extremely focused on use cases with Linux or MacOS and sometimes things get 
-harder for us Windows users. Therefore, the following is a step-by-step installation and user guide
-for Anaconda on Windows.
+scientific Python distribution including its own package manager conda. Anaconda
+simplifies the usage and maintenance of python in particular for windows user. However,
+the programming community is still extremely focused on use cases with Linux or MacOS
+and sometimes things get harder for us Windows users. Therefore, the following is a
+step-by-step installation and user guide for Anaconda on Windows.
 
 Installation
 ------------
@@ -21,35 +21,36 @@ Installation
    so it is available to all users. But then, you have to be careful as every time you
    interact with the base environment you have to use an elevated shell (a shell with
    administrator privileges as described `here
-   <https://www.digitalcitizen.life/ways-launch-powershell-windows-admin>`_). 
-   
-.. warning::
+   <https://www.digitalcitizen.life/ways-launch-powershell-windows-admin>`_).
 
-   If you install Anaconda for a single user you may run into problems when executing
-   python from the Windows Powershell. In particular, it may happen, that you can run
-   your python files only from the Anaconda prompt.
+   .. warning::
+
+       If you install Anaconda for a single user you may run into problems when
+       executing python from the Windows Powershell. In particular, it may happen, that
+       you can run your Python files only from the Anaconda prompt.
 
 3. Tick "Add Anaconda to my PATH environment variable" and also "Register Anaconda as my
    default Python 3.x". Finish installation.
-   
-4. Often times you have to manually add Anaconda to your PATH environment. You can find 
-   an instruction on how to do that `here <https://www.computerhope.com/issues/ch000549.htm>`_.
-   If you installed Anaconda for all users, the PATH should read something like 
-   *C:\ProgramData\Anaconda3*
+
+4. Often times you have to manually add Anaconda to your PATH environment. You can find
+   an instruction on how to do that `here
+   <https://www.computerhope.com/issues/ch000549.htm>`_. If you installed Anaconda for
+   all users, the PATH should read something like ``C:\ProgramData\Anaconda3``.
 
 Which console?
 --------------
 
 The Powershell is the preferred way on Windows as it provides a better interface and
-better tab-completion. 
+better tab-completion.
 
 Conda Version < 4.6
 ^^^^^^^^^^^^^^^^^^^
 
-Unlike CMD and "Anaconda Prompt", it is not fully supported by Anaconda. 
-In particular, the activation and deactivation of environments is broken in older versions of conda (<4.6). 
-To solve this issue, you have to install an `additional package <https://github.com/BCSharp/PSCondaEnvs>`_ .
-If you installed Anaconda with administrator privileges, start an elevated shell. Then, type
+Unlike CMD and "Anaconda Prompt", it is not fully supported by Anaconda. In particular,
+the activation and deactivation of environments is broken in older versions of conda
+(<4.6). To solve this issue, you have to install an `additional package
+<https://github.com/BCSharp/PSCondaEnvs>`_ . If you installed Anaconda with
+administrator privileges, start an elevated shell. Then, type
 
 .. code-block:: bash
 
@@ -65,43 +66,45 @@ with
 
 and answer the following prompt with "Yes, for all" or ``a``.
 
-Now, if you go back to your normal Powershell, you can activate an existing environment with
+Now, if you go back to your normal Powershell, you can activate an existing environment
+with
 
-.. code-block::bash
+.. code-block:: bash
 
-   $ activate <env-name>
+    $ activate <env-name>
 
 and deactivate it with
 
 
-.. code-block::bash
+.. code-block:: bash
 
-   $ deactivate
-   
-Conda Versions 4.6+
-^^^^^^^^^^^^^^^^^^^
+    $ deactivate
+
+Conda Versions >= 4.6
+^^^^^^^^^^^^^^^^^^^^^
 
 Starting from version 4.6 Anaconda officially supports Powershell
-(`see Conda 4.6 Release <https://www.anaconda.com/conda-4-6-release/>`_). 
+(`see Conda 4.6 Release <https://www.anaconda.com/conda-4-6-release/>`_).
 Note, however, that this is still in an experimental state and issues may still occur.
-To initialize the use of Anaconda environments from Powershell, you have to open your 
+To initialize the use of Anaconda environments from Powershell, you have to open your
 Powershell and execute:
 
-.. code-block::bash
+.. code-block:: bash
 
-   $ conda init
-   
-You then have to restart your powershell. Now, you can activate existing environments with
- 
-.. code-block::bash
+    $ conda init
 
-   $ conda activate <env-name>
-   
+You then have to restart your Powershell. Now, you can activate existing environments
+with
+
+.. code-block:: bash
+
+    $ conda activate <env-name>
+
 and deactivate with
- 
-.. code-block::bash
- 
-   $ conda deactivate
+
+.. code-block:: bash
+
+    $ conda deactivate
 
 How to interact with the base environment?
 ------------------------------------------
@@ -116,7 +119,8 @@ programming or prototyping. In all other cases, create a separate environment.
 Updating conda and the package manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Start a Powershell (with administrator privileges if you installed Anaconda for all users). Type
+Start a Powershell (with administrator privileges if you installed Anaconda for all
+users). Type
 
 .. code-block:: bash
 
@@ -172,9 +176,9 @@ To install a package type
 
 and to update
 
-  .. code-block:: bash
+.. code-block:: bash
 
-      $ conda update statsmodels
+    $ conda update statsmodels
 
 Export an environment
 ^^^^^^^^^^^^^^^^^^^^^
