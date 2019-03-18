@@ -55,6 +55,15 @@ installed:
 - `check-yaml - Validating .yaml files
   <https://github.com/pre-commit/pre-commit-hooks>`_
 
+To update all hooks, type
+
+.. code-block:: bash
+
+    $ pre-commit autoupdate
+
+which will change the versions in ``.pre-commit-config.yaml``. Do that from time to
+time.
+
 
 Testing
 -------

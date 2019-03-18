@@ -2,8 +2,8 @@ Documentation
 =============
 
 The problem with guides on how to write documentations are more or less cheat sheets for
-restructured-text which is not what I was looking for. Therefore, here is an
-non-complete lists of what I consider to be helpful.
+restructured-text which is not what I was looking for. Therefore, here are some projects
+which what I consider as beautiful and informative documentations.
 
 List of example projects
 ------------------------

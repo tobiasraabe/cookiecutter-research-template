@@ -21,11 +21,10 @@ former constraint and can be given into the hands of private company.
 Installation
 ------------
 
-To enable testing on travis-ci.com, go to https://travis-ci.com and choose log in with
-Github in the upper right corner. Then, you have to agree that Travis-CI is allowed to
-have access to your repositories. There is nothing to do afterwards as Travis-CI will
-automatically check your repositories for a ``.travis.yml`` which includes all the build
-information.
+To enable testing, go to https://travis-ci.com and choose log in with Github in the
+upper right corner. Then, you have to agree that Travis-CI is allowed to have access to
+your repositories. There is nothing to do afterwards as Travis-CI will automatically
+check your repositories for a ``.travis.yml`` which includes all the build information.
 
 To get an impression of a configuration file, take the following example of the
 Travis-CI configuration of this template.
@@ -73,5 +72,5 @@ different stages of the build process. Here is one.
   <https://docs.pytest.org/en/latest/skipping.html>`_.
 - ``branches`` includes a current fix so that commits on PRs are not built twice.
 
-There are a lot of things you can do. See `this document <https://docs.travis-
-ci.com/user/customizing-the-build/>`_ if need to have a different configuration.
+There are a lot of things you can do. See this `document <https://docs.travis-
+ci.com/user/customizing-the-build/>`_ if you are looking for a different configuration.
