@@ -12,16 +12,15 @@ The general research project must be configured in advance with
 
     $ python waf.py configure
 
-Make sure that all steps pass successfully. Otherwise determine what is
-missing, fix it and rerun the command. After that, run
+Make sure that all steps pass successfully. Otherwise determine what is missing, fix it
+and rerun the command. After that, run
 
 .. code-block:: bash
 
     $ python waf.py (build)
 
-where ``build`` is optional, but it executes the same action. If you want to
-delete everything created in ``bld`` and restart the project from the source
-files, run
+where ``build`` is optional, but it executes the same action. If you want to delete
+everything created in ``bld`` and restart the project from the source files, run
 
 .. code-block:: bash
 
@@ -31,9 +30,9 @@ files, run
 Quality Checks
 --------------
 
-The quality of the code base is ensured by `pre-commit-hooks
-<https://pre-commit.com>`_  which are automatically executed before changes are
-committed. If a check fails, the commit is aborted. To install the hooks, type
+The quality of the code base is ensured by `pre-commit-hooks <https://pre-commit.com>`_
+which are automatically executed before changes are committed. If a check fails, the
+commit is aborted. To install the hooks, type
 
 .. code-block:: bash
 
@@ -45,19 +44,25 @@ After that, run
 
     $ pre-commit run --all-files
 
-to execute the checks without making a commit. Currently, the following hooks
-are installed:
+to execute the checks without making a commit. Currently, the following hooks are
+installed:
 
-- `black - The Uncomprimising Python Formatter
-  <https://github.com/ambv/black>`_
-- `blacken-docs - Black for Documentation
-  <https://github.com/asottile/blacken-docs>`_
+- `black - The Uncomprimising Python Formatter <https://github.com/ambv/black>`_
+- `blacken-docs - Black for Documentation <https://github.com/asottile/blacken-docs>`_
 - `flake8 - Linting <https://gitlab.com/pycqa/flake8>`_
-- `reorder-python-imports
-  <https://github.com/asottile/reorder_python_imports>`_
+- `reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
 - `doc8 <https://github.com/openstack/doc8>`_
 - `check-yaml - Validating .yaml files
   <https://github.com/pre-commit/pre-commit-hooks>`_
+
+To update all hooks, type
+
+.. code-block:: bash
+
+    $ pre-commit autoupdate
+
+which will change the versions in ``.pre-commit-config.yaml``. Do that from time to
+time.
 
 
 Testing

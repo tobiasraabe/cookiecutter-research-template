@@ -1,9 +1,7 @@
 name: {{ cookiecutter.conda_environment_name }}
 channels:
   - defaults
-  - pscondaenvs
 dependencies:
-  - pscondaenvs=1.2.4
   - python={{ cookiecutter.python_version }}
   - python-graphviz=0.8.4
   - pip:

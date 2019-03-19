@@ -1,9 +1,7 @@
 name: cc
 channels:
   - defaults
-  - pscondaenvs
 dependencies:
-  - pscondaenvs=1.2.4
   - python=3.7
   - python-graphviz=0.8.4
   - pip:

@@ -1,4 +1,4 @@
-TODO
+Todo
 ====
 
-Currently, no features are planned, but I am open to suggestions :smile:.
+Currently, no features are planned, but I am open to suggestions :).
