@@ -265,3 +265,19 @@ Advanced tips
   <https://repo.continuum.io/miniconda/>`_ might be an option for you. This setup only
   installs the package manager, but no base environment. This also saves space on your
   disk.
+- Often times you want to start a Jupyter notebook server while continuing to use the
+  shell. Just type
+
+  .. code-block:: bash
+
+      $ start jupyter notebook
+
+  or
+
+  .. code-block:: bash
+
+      $ start jupyter lab
+
+  which will open a new Powershell within the same conda environment running the server.
+  Then, you are able to install new packages from the unblocked shell, but you have to
+  restart running kernels before packages become available.
