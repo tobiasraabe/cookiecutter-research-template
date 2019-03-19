@@ -255,3 +255,13 @@ Remove an environment
 
 The rest of the commands can be found in the `official conda documentation
 <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_.
+
+
+Advanced tips
+-------------
+
+- At some point, you might decide that you do not need a base environment or that you
+  would like to force yourself to create environments for each project. Then, `Miniconda
+  <https://repo.continuum.io/miniconda/>`_ might be an option for you. This setup only
+  installs the package manager, but no base environment. This also saves space on your
+  disk.
