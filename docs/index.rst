@@ -44,3 +44,4 @@ code, therefore more comprehensible and reproducible research.
     anaconda-on-windows
     todo
     contributing
+    authors
