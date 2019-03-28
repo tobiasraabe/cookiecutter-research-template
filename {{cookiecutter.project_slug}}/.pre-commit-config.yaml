@@ -1,5 +1,4 @@
-# Exclude every file or folder starting with a dot.
-exclude: ^[^\.].*$
+exclude: (\.mywaflib)
 repos:
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v1.4.0
