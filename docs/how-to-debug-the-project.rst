@@ -1,5 +1,5 @@
 How to debug the project
-::::::::::::::::::::::::
+========================
 
 When we want to debug our research project, we often want to run a single file within
 the Waf framework repeatedly or we even want to dive into the debugger if an error
