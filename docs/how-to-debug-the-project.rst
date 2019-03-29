@@ -6,10 +6,10 @@ the Waf framework repeatedly or we even want to dive into the debugger if an err
 occurs. Normally, this is not possible as Waf controls the execution and places the
 ``bld`` or ``src`` on the ``PYTHONPATH``. Thus, if we execute a single file, an
 ``ImportError`` is raised. Adding the paths manually seems a little bit hacky and can be
-circumvented much more elegantly. In addition to that, even if we insert a debug
-statement in the file and the code reaches this line, Waf hides the prompt of the
-debugger from the user. Then, it will silently run forever as the debugger is never
-closed an execution continued.
+circumvented elegantly. In addition to that, even if we insert a debug statement in the
+file and the code reaches this line, Waf hides the prompt of the debugger from the user.
+Then, it will silently run forever as the debugger is never closed and execution will
+pause.
 
 Make ``bld`` and ``src`` importable
 -----------------------------------
