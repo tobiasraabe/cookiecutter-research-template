@@ -40,7 +40,7 @@ code, therefore more comprehensible and reproducible research.
     :hidden:
     :caption: Waf
 
-    how-to-debug-waf
+    how-to-debug-the-project
     waf-tips-and-tricks
 
 .. toctree::
