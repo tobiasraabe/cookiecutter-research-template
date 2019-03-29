@@ -1,5 +1,5 @@
 How to debug the project
-========================
+::::::::::::::::::::::::
 
 When we want to debug our research project, we often want to run a single file within
 the Waf framework repeatedly or we even want to dive into the debugger if an error
@@ -103,7 +103,8 @@ The second method to start the debugger is directly from the command line. Type
 
     $ python -m pdb -c continue src/data_management/create_dataset.py
 
-to enter the debugger if an exception occurs.
+to enter the debugger if an exception occurs. If you leave out ``-c continue`` you will
+jump into the debugger right at the start.
 
 
 Using a different debugger
@@ -122,21 +123,12 @@ debugger for ``breakpoint()`` by setting the environment variable
 
 .. code-block:: bash
 
-    PYTHONBREAKPOINT=ipdb.set_trace.
+    $ export PYTHONBREAKPOINT=ipdb.set_trace  # Unix
 
-This can be done inside the code at the top of the file with
+    $ $env:PYTHONBREAKPOINT="ipdb.set_trace" # Windows
 
-.. code-block:: python
-
-    import os
-
-
-    os.environ["PYTHONBREAKPOINT"] = "ipdb.set_trace"
-
-or from the command line with
+Or just run the file with ``ipdb`` by running
 
 .. code-block:: bash
 
-    $ export PYTHONBREAKPOINT=ipdb.set_trace  # Permanently for the session.
-
-    $ PYTHONBREAKPOINT=ipdb.set_trace python src/data_management/create_dataset.py
+    python -m ipdb -c continue src/data_management/create_dataset.py
