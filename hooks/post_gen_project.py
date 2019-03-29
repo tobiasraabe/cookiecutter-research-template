@@ -48,3 +48,6 @@ if __name__ == "__main__":  # noqa: C901
         )
 
         os.system("pip install -e .")
+
+    if "{{ cookiecutter.init_repo_at_finish }}" == "yes":
+        os.system("git init")

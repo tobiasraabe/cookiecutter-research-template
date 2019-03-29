@@ -24,5 +24,6 @@
   "conda_environment_name": "{{ cookiecutter.project_slug }}",
   "_copy_without_render": [
     ".mywaflib", "*.bib"
-  ]
+  ],
+  "init_repo_at_finish": ["no", "yes"]
 }
