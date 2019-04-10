@@ -1,15 +1,16 @@
 How to debug the project
 ========================
 
-When we want to debug our research project, we often want to run a single file within
-the Waf framework repeatedly or we even want to dive into the debugger if an error
-occurs. Normally, this is not possible as Waf controls the execution and places the
-``bld`` or ``src`` on the ``PYTHONPATH``. Thus, if we execute a single file, an
-``ImportError`` is raised. Adding the paths manually seems a little bit hacky and can be
-circumvented elegantly. In addition to that, even if we insert a debug statement in the
-file and the code reaches this line, Waf hides the prompt of the debugger from the user.
-Then, it will silently run forever as the debugger is never closed and execution will
-pause.
+To debug our research project, we often want to run a single file within the Waf
+framework repeatedly or we even want to dive into the debugger if an error occurs.
+Normally, this is not possible as Waf controls the execution and places the ``bld`` or
+``src`` on the ``PYTHONPATH``. Thus, if we execute a single file, an ``ImportError`` is
+raised since ``bld.project_paths`` cannot be imported. Adding the paths manually seems a
+little bit hacky and can be circumvented elegantly. In addition to that, even if we
+insert a debug statement in the file and the code reaches this line, Waf hides the
+prompt of the debugger from the user. Then, it will silently run forever as the debugger
+is never closed.
+
 
 Make ``bld`` and ``src`` importable
 -----------------------------------
@@ -17,7 +18,7 @@ Make ``bld`` and ``src`` importable
 To place ``bld`` and ``src`` on ``PYTHONPATH`` we turn the project into a python
 package. This can be accomplished by placing a file called ``setup.py`` in the root
 directory of the project. This file is the entry point for every other Python package
-you have ever installed with ``pip``. The file for our project contains only necessary
+you have ever installed with ``pip``. For our project, this file contains only necessary
 information as we will never upload our research project on PyPi. Here is what the file
 looks like:
 
