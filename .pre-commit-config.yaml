@@ -9,7 +9,7 @@ repos:
     rev: v2.1.0
     hooks:
     -   id: check-yaml
-        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|.travis).yml
+        exclude: \{\{cookiecutter.project_slug\}\}/(readthedocs|environment|\.travis)\.yml
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.7
     hooks:
