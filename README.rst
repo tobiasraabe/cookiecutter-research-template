@@ -70,9 +70,9 @@ At last, type
 
 .. code-block:: bash
 
-    $ (source) activate <env-name>
-
-on Windows (Linux, MacOS).
+    $ conda activate <env-name>     # to activate the environment.
+    $ git init                      # to initialize a git repository.
+    $ pre-commit install            # to install pre-commit hooks.
 
 Happy research!
 
@@ -107,7 +107,7 @@ Code Formatting with `black`_ and `reorder-python-imports`_
 
     .. code-block:: bash
 
-        $ pre-commit run --all-files.
+        $ pre-commit run black reorder-python-imports --all-files (-a).
 
 .. _black: https://github.com/ambv/black
 .. _reorder-python-imports: https://github.com/asottile/reorder_python_imports
@@ -124,7 +124,7 @@ Linting
 
     .. code-block:: bash
 
-        $ pre-commit run flake8 doc8 restructuredtext-lint
+        $ pre-commit run flake8 doc8 restructuredtext-lint -a
 
     To test whether the documentation is built successfully, run
 
