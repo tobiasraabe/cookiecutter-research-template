@@ -84,6 +84,7 @@ Python 3.7 this is even more simple.
 
     ...
 
+
     def main():
         df = pd.read_stata(ppj("IN_DATA", "example.dta"))
 
@@ -92,6 +93,7 @@ Python 3.7 this is even more simple.
         breakpoint()  # For Python >= 3.7
 
         df.AGE = df.AGE.astype(int)
+
 
     ...
 
