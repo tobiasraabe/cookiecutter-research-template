@@ -37,9 +37,6 @@ if __name__ == "__main__":  # noqa: C901
     if "{{ cookiecutter.add_cleaner }}" == "no":
         remove_file("clean.py")
 
-    if "{{ cookiecutter.add_debugger }}" == "no":
-        remove_file("debug.ps1")
-
     if "{{ cookiecutter.add_readthedocs }}" == "no":
         remove_file("readthedocs.yml")
 
@@ -49,3 +46,8 @@ if __name__ == "__main__":  # noqa: C901
             "--file environment.yml "
             "--name {{ cookiecutter.conda_environment_name }}"
         )
+
+        os.system("pip install -e .")
+
+    if "{{ cookiecutter.init_repo_at_finish }}" == "yes":
+        os.system("git init")

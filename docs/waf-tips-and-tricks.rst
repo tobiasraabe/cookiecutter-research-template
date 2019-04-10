@@ -1,6 +1,10 @@
 Tips and Tricks for Waf
 =======================
 
+Here is a list of tips and tricks you might want to use for your research project. Some
+of the things are only suggestions to solve some problems, but are not further
+explained.
+
 Compiling the reports with LaTeX
 --------------------------------
 
@@ -41,13 +45,6 @@ Running interactive commands
 Apparently, this should be possible with `this <https://stackoverflow.com/
 questions/44141704/can-i-run-an-interactive-command>`_. Should test it with the debug
 script.
-
-
-setup.py
---------
-
-Try out using a ``setup.py`` and ``pip install -e .`` so you can execute files on their
-own without running into ``ImportError`` with ``import bld...``.
 
 
 Type annotations with Monkeytype

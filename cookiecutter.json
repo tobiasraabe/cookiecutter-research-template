@@ -13,7 +13,6 @@
   "add_travis": ["yes", "no"],
   "add_readthedocs": ["no", "yes"],
   "add_cleaner": ["no", "yes"],
-  "add_debugger": ["no", "yes"],
   "add_downloader": ["no", "yes"],
   "create_author_file": ["yes", "no"],
   "create_history_file": ["yes", "no"],
@@ -25,5 +24,6 @@
   "conda_environment_name": "{{ cookiecutter.project_slug }}",
   "_copy_without_render": [
     ".mywaflib", "*.bib"
-  ]
+  ],
+  "init_repo_at_finish": ["no", "yes"]
 }

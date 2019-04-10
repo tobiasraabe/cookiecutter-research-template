@@ -47,3 +47,4 @@ repos:
       files: '(README.rst)'
       name: restructuredtext-lint - Is the README PyPi-compliant?
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
+      additional_dependencies: [Pygments]

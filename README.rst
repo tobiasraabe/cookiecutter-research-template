@@ -41,8 +41,8 @@ code.
 Installation
 ------------
 
-This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template. To use it,
-you need to install ``cookiecutter`` by running
+This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template. Install it
+by running
 
 .. code-block:: bash
 
@@ -55,8 +55,8 @@ typing
 
     $ cookiecutter https://github.com/tobiasraabe/cookiecutter-research-template.git
 
-Answer all the prompts and a folder ``cookiecutter-research-template`` is created in
-your current directory. Rename the folder initialize a repository.
+Answer all the prompts and a folder ``<project-name>`` is created in your current
+directory.
 
 One of the last prompts is about whether the template should create a conda environment
 from the pre-configured `environment.yml`. If that is not what you want, stick to the

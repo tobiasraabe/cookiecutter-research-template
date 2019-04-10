@@ -38,9 +38,17 @@ code, therefore more comprehensible and reproducible research.
 .. toctree::
     :maxdepth: 1
     :hidden:
+    :caption: Waf
+
+    how-to-debug-the-project
+    waf-tips-and-tricks
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
     :caption: Additional Information
 
-    waf-tips-and-tricks
+
     anaconda-on-windows
     todo
     contributing
