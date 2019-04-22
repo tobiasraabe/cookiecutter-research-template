@@ -82,6 +82,20 @@ and deactivate it with
 Conda Versions >= 4.6
 ^^^^^^^^^^^^^^^^^^^^^
 
+.. warning::
+
+   There are new problems with conda 4.6.9 and above. Either conda does not work at
+   all or after ``conda init`` and shell restart, the path is not displayed after
+   the environment name anymore. I would stay at version 4.6.8 at the moment. Install
+   it with
+   
+   .. code-block:: bash
+   
+       $ conda install conda=4.6.8
+   
+   If you want to try out a newer version, install it and revert back if the problems
+   have not been solved.
+
 Starting from version 4.6 Anaconda officially supports Powershell
 (`see Conda 4.6 Release <https://www.anaconda.com/conda-4-6-release/>`_).
 Note, however, that this is still in an experimental state and issues may still occur.
