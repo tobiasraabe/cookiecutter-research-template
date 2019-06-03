@@ -7,7 +7,7 @@ dependencies:
   - pip:
     - click==7.0
     - doc8==0.8.0
-    - jupyterlab==0.35.5
+    - jupyterlab==0.35.6
     - matplotlib==3.0.3
     - nbsphinx==0.4.2
     - pandas==0.24.2
