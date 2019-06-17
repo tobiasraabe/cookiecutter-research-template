@@ -22,5 +22,5 @@ dependencies:
     - sphinx-autobuild==0.7.1
     - sphinx-rtd-theme==0.4.3
     - sphinxcontrib-bibtex==0.4.2
-    - tqdm==4.31.1
+    - tqdm==4.32.1
     - tox==3.9.0
