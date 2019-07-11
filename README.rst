@@ -183,8 +183,8 @@ Visualization of the DAG
         </p>
 
 Others
-    - `Waf Tips and Trick <https://github.com/tobiasraabe/cookiecutter-
-      research-template/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/ WAF.rst>`_
+    - `Waf Tips and Trick <https://cookiecutter-research-template.readthedocs.io/
+      en/latest/waf-tips-and-tricks.html>`_
     - Writing documentation with Jupyter notebooks (`nbsphinx
       <https://github.com/spatialaudio/nbsphinx>`_ )
     - Auxiliary scripts for figures in ``src/figures/auxiliaries.py``.
