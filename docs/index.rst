@@ -31,7 +31,7 @@ code, therefore more comprehensible and reproducible research.
     :caption: Features
 
     pyup
-    travis
+    azure-pipelines
     code-conventions
     documentation
 

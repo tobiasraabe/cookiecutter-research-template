@@ -10,7 +10,7 @@
   "python_version": "3.6",
   "add_pyup": ["yes", "no"],
   "add_tox": ["yes", "no"],
-  "add_travis": ["yes", "no"],
+  "add_azure": ["yes", "no"],
   "add_readthedocs": ["no", "yes"],
   "add_cleaner": ["no", "yes"],
   "add_downloader": ["no", "yes"],

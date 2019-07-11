@@ -83,9 +83,11 @@ Automatic dependency updates with `pyup <https://pyup.io>`_
     Connect your Github repository with https://pyup.io and you get automatic PRs if one
     of your dependency is outdated.
 
-Automatic testing with `Travis <https://travis-ci.com>`_
-    Connect your Github repository with https://travis-ci.com and the master branch and
-    PRs are automatically tested and you can see the results online.
+Automatic testing with `Azure-Pipelines
+    <https://azure.microsoft.com/de-de/services/devops/pipelines/>`_
+    Connect your Github repository with
+    https://azure.microsoft.com/de-de/services/devops/pipelines/ and the master branch
+    and PRs are automatically tested and you can see the results online.
 
 Testing with `tox <https://github.com/tox-dev/tox>`_
     Tox is a framework which allows you to define tests and run them in isolated

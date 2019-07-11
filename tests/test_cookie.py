@@ -55,17 +55,17 @@ def test_remove_pyup(cookies):
     assert "pyup" not in readme
 
 
-def test_remove_travis(cookies):
-    result = cookies.bake(extra_context={"add_travis": "no"})
+def test_remove_azure(cookies):
+    result = cookies.bake(extra_context={"add_azure": "no"})
 
-    travis = result.project.join("travis.yml")
+    azure = result.project.join(".azure-pipelines.yaml")
     readme = result.project.join("README.rst").read()
 
     assert result.exit_code == 0
     assert result.exception is None
 
-    assert travis.check(exists=0)
-    assert "travis" not in readme
+    assert azure.check(exists=0)
+    assert "azure" not in readme
 
 
 @pytest.mark.skipif(

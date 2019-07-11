@@ -9,7 +9,7 @@ repos:
     rev: v2.2.3
     hooks:
     -   id: check-yaml
-        exclude: '.*\/(readthedocs|environment|\.travis)\.yml'
+        exclude: '.*\/(readthedocs|environment|\.azure-pipelines)\.ya?ml'
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.8
     hooks:
