@@ -22,14 +22,14 @@ Formatters are tools which take the code and transform it to something else with
 influencing the way the code works.
 
 
-`Black <https://github.com/ambv/black>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+`Black <https://github.com/python/black>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Black is relatively new in the Python ecosystem and calls itself the uncompromising
-Python code formatter. The slogan is true. There are almost no options to choose a
-different style except line length and whether you want to use single quotes, ``'``, or
-double quotes, ``"``, for strings. But, it definitely produces more readable code and
-helps you to learn what good code looks like.
+Black has made a rapid ascent in the Python ecosystem and calls itself the
+uncompromising Python code formatter. The slogan is true. There are almost no options to
+choose a different style except line length and whether you want to use single quotes,
+``'``, or double quotes, ``"``, for strings. But, it definitely produces more readable
+code and helps you to learn what good code looks like.
 
 The default line length is set to 88. Other common values are 79, 80, 88, 120. 80
 characters can be displayed on most devices and most of the time it is possible to have
@@ -42,7 +42,7 @@ text. Some others use single quotes for data and double quotes for real language
 settles on double quotes only and despite that I am more inclined to use single quotes
 myself, I think standardization is a good thing. Therefore, the formatter will recode
 all strings to double quotes. If you want to keep it your way, insert
-``skip-string-normalization = true`` in the ``pyproject.toml``.
+``skip-string-normalization = true`` in ``pyproject.toml``.
 
 .. note::
 
