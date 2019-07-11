@@ -25,11 +25,11 @@ if __name__ == "__main__":  # noqa: C901
         remove_file(".pyup.yml")
 
     if "{{ cookiecutter.add_tox }}" == "no":
-        remove_file(".travis.yml")
+        remove_file(".azure-pipelines.yaml")
         remove_file("tox.ini")
 
-    if "{{ cookiecutter.add_travis }}" == "no":
-        remove_file(".travis.yml")
+    if "{{ cookiecutter.add_azure }}" == "no":
+        remove_file(".azure-pipelines.yaml")
 
     if "{{ cookiecutter.add_downloader }}" == "no":
         remove_file("prepare_data_for_project.py")

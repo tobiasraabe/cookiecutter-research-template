@@ -1,8 +1,8 @@
 {{ cookiecutter.project_name }}
 {% for _ in cookiecutter.project_name %}={% endfor %}
 
-{% if cookiecutter.add_travis == "yes" %}.. image:: https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg?branch=master
-    :target: https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+{% if cookiecutter.add_azure == "yes" %}.. image:: https://dev.azure.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/_apis/build/status/{{ cookiecutter.github_username }}.{{ cookiecutter.project_slug }}?branchName=master
+    :target: https://dev.azure.com/{{ cookiecutter.github_username }}/cookiecutter-research-template/_build/latest?definitionId=1&branchName=master
 {% endif %}
 {% if cookiecutter.add_pyup == "yes" %}.. image:: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg
     :target: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/
