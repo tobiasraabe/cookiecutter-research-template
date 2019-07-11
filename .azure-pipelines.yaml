@@ -22,7 +22,7 @@ jobs:
   - bash: conda update conda --yes --quiet
     displayName: Update conda.
 
-  - bash: conda create --yes --quiet --name cc python=$PYTHON_VERSION
+  - bash: conda create --yes --quiet --name cc -c defaults -c conda-forge python=$PYTHON_VERSION tox
     displayName: Create Anaconda environment.
 
   - bash: |
@@ -48,7 +48,7 @@ jobs:
   - powershell: conda update conda --yes --quiet
     displayName: Update conda.
 
-  - powershell: conda create --yes --quiet --name cc python=$env:PYTHON_VERSION
+  - powershell: conda create --yes --quiet --name cc -c defaults -c conda-forge python=$env:PYTHON_VERSION tox
     displayName: Create Anaconda environment.
 
   - script: |
@@ -81,8 +81,8 @@ jobs:
 
   - bash: conda info -a
 
-  - bash: conda install --yes --quiet python=$PYTHON_VERSION --name cc
-    displayName: Install Anaconda environment.
+  - bash: conda create --yes --quiet --name cc -c defaults -c conda-forge python=$PYTHON_VERSION tox
+    displayName: Create Anaconda environment.
 
   - bash: conda list
 
