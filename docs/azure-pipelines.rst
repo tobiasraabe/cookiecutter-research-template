@@ -31,3 +31,4 @@ To get an impression of a configuration file, take the following example of the
 Azure-Pipelines configuration of this template.
 
 .. literalinclude:: ../{{cookiecutter.project_slug}}/.azure-pipelines.yaml
+    :language: yaml

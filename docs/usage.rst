@@ -47,7 +47,8 @@ After that, run
 to execute the checks without making a commit. Currently, the following hooks are
 installed:
 
-- `black - The Uncomprimising Python Formatter <https://github.com/ambv/black>`_
+- `black - The Uncomprimising Python Formatter <permanently to
+  https://github.com/python/black>`_
 - `blacken-docs - Black for Documentation <https://github.com/asottile/blacken-docs>`_
 - `flake8 - Linting <https://gitlab.com/pycqa/flake8>`_
 - `reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_

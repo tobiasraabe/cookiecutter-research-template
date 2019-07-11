@@ -1,8 +1,8 @@
 Installation
 ============
 
-This is a `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ template. To use it,
-you need to install ``cookiecutter`` by running
+This is a `Cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ template. To
+use it, you need to install ``cookiecutter`` by running
 
 .. code-block:: bash
 
