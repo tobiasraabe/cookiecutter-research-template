@@ -7,11 +7,8 @@
 
     <h1>cookiecutter-research-template</h1>
 
-.. image:: https://travis-ci.com/tobiasraabe/cookiecutter-research-template.svg?branch=master
-    :target: https://travis-ci.com/tobiasraabe/cookiecutter-research-template
-
-.. image:: https://ci.appveyor.com/api/projects/status/6etx3nu4vqgr9f30/branch/master?svg=true
-    :target: https://ci.appveyor.com/project/tobiasraabe/cookiecutter-research-template
+.. image:: https://dev.azure.com/tobiasraabe/cookiecutter-research-template/_apis/build/status/tobiasraabe.cookiecutter-research-template?branchName=master
+    :target: https://dev.azure.com/tobiasraabe/cookiecutter-research-template/_build/latest?definitionId=1&branchName=master
 
 .. image:: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/shield.svg
     :target: https://pyup.io/repos/github/tobiasraabe/cookiecutter-research-template/
