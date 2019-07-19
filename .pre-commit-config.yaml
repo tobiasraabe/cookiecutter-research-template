@@ -34,7 +34,6 @@ repos:
         additional_dependencies: [black]
         exclude: '(how-to-debug-the-project\.rst)'
         types: [rst]
-        args: [--line-length=88, --py36]
 -   repo: https://github.com/ambv/black
     rev: 19.3b0
     hooks:
