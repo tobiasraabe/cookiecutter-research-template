@@ -4,9 +4,9 @@ Credits
 Development Lead
 ----------------
 
-* Tobias Raabe
+* `Tobias Raabe <https://github.com/tobiasraabe>`_
 
 Contributors
 ------------
 
-* Radost Holler (documentation)
+* `Radost Holler <https://github.com/raholler>`_

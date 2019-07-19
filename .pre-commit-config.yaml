@@ -1,15 +1,22 @@
 exclude: (\.mywaflib)
 repos:
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v1.6.0
-    hooks:
-    -   id: reorder-python-imports
-        files: '(\.pyi?|wscript)$'
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.2.3
     hooks:
     -   id: check-yaml
         exclude: '.*\/(readthedocs|environment|\.azure-pipelines)\.ya?ml'
+    -   id: check-merge-conflict
+    -   id: debug-statements
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v1.21.0
+    hooks:
+    -   id: pyupgrade
+        args: [--py36-plus]
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v1.6.0
+    hooks:
+    -   id: reorder-python-imports
+        files: '(\.pyi?|wscript)$'
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.8
     hooks:
@@ -25,7 +32,6 @@ repos:
     hooks:
     -   id: blacken-docs
         additional_dependencies: [black]
-        files: '(\.md|\.rst)$'
         exclude: '(how-to-debug-the-project\.rst)'
 -   repo: https://github.com/ambv/black
     rev: 19.3b0
@@ -47,3 +53,8 @@ repos:
       name: restructuredtext-lint - Is the README PyPi-compliant?
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
       additional_dependencies: [Pygments]
+-   repo: meta
+    hooks:
+    -   id: check-hooks-apply
+    -   id: check-useless-excludes
+    # -   id: identity  # Prints all files passed to pre-commits. Debugging.
