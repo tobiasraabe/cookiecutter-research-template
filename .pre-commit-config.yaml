@@ -33,6 +33,8 @@ repos:
     -   id: blacken-docs
         additional_dependencies: [black]
         exclude: '(how-to-debug-the-project\.rst)'
+        types: [rst]
+        args: [--line-length=88, --py36]
 -   repo: https://github.com/ambv/black
     rev: 19.3b0
     hooks:
@@ -43,7 +45,7 @@ repos:
     - id: doc8
       entry: doc8
       language: system
-      files: '(\.md|\.rst)$'
+      types: [rst]
       name: doc8 - Lint the documentation.
       exclude: \{\{cookiecutter.project_slug\}\}/README.rst
     - id: restructuredtext-lint
@@ -55,6 +57,6 @@ repos:
       additional_dependencies: [Pygments]
 -   repo: meta
     hooks:
-    -   id: check-hooks-apply
+    # -   id: check-hooks-apply
     -   id: check-useless-excludes
     # -   id: identity  # Prints all files passed to pre-commits. Debugging.
