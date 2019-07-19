@@ -3,23 +3,23 @@ channels:
   - defaults
 dependencies:
   - python={{ cookiecutter.python_version }}
-  - python-graphviz=0.8.4
+  - python-graphviz
+{% if cookiecutter.add_downloader == "yes" or cookiecutter.add_cleaner == "yes" %}  - click{% endif %}
+{% if cookiecutter.add_tox == "yes" %}  - doc8==0.8.0{% endif %}
+  - jupyterlab
+  - matplotlib
+  - nbsphinx
+  - pandas
+  - pybtex
+  - pytest
+  - pytest-cov
+  - pytest-pythonpath
+{% if cookiecutter.add_tox == "yes" %}  - restructuredtext_lint{% endif %}
+  - sphinx
+  - sphinx-autobuild
+  - sphinx_rtd_theme
+  - sphinxcontrib-bibtex
+{% if cookiecutter.add_downloader == "yes" %}  - tqdm{% endif %}
+{% if cookiecutter.add_tox == "yes" %}  - tox{% endif %}
   - pip:
-{% if cookiecutter.add_downloader == "yes" or cookiecutter.add_cleaner == "yes" %}    - click==7.0{% endif %}
-{% if cookiecutter.add_tox == "yes" %}    - doc8==0.8.0{% endif %}
-    - jupyterlab==0.35.4
-    - matplotlib==3.0.2
-    - nbsphinx==0.4.2
-    - pandas==0.24.1
-    - pre-commit==1.14.4
-    - pybtex==0.22.2
-    - pytest==4.3.0
-    - pytest-cov==2.6.1
-    - pytest-pythonpath==0.7.3
-{% if cookiecutter.add_tox == "yes" %}    - restructuredtext_lint==1.2.2{% endif %}
-    - sphinx==1.8.4
-    - sphinx-autobuild==0.7.1
-    - sphinx-rtd-theme==0.4.3
-    - sphinxcontrib-bibtex==0.4.2
-{% if cookiecutter.add_downloader == "yes" %}    - tqdm==4.31.1{% endif %}
-{% if cookiecutter.add_tox == "yes" %}    - tox==3.7.0{% endif %}
+    - pre-commit

@@ -6,7 +6,7 @@ import pytest
 
 def test_bake_project(cookies):
     major, minor = sys.version_info[:2]
-    python_version = "{}.{}".format(major, minor)
+    python_version = f"{major}.{minor}"
 
     result = cookies.bake(
         extra_context={"project_slug": "helloworld", "python_version": python_version}

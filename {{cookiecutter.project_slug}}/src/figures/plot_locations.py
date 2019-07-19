@@ -25,7 +25,7 @@ def plot_locations(locations_by_round, model_name):
             fig.delaxes(ax)
             break
         locs = locations_by_round[n_cycle]
-        ax.set_title("Cycle {}".format(n_cycle))
+        ax.set_title(f"Cycle {n_cycle}")
         ax.tick_params(labelbottom=False, labelleft=False)
         ax.set_facecolor("azure")
         ax.plot(
@@ -33,7 +33,7 @@ def plot_locations(locations_by_round, model_name):
         )
         ax.plot(locs[1][:, 0], locs[1][:, 1], "o", markerfacecolor="green", **PLOT_ARGS)
 
-    fig.savefig(ppj("OUT_FIGURES", "schelling_{}.png".format(model_name)))
+    fig.savefig(ppj("OUT_FIGURES", f"schelling_{model_name}.png"))
 
 
 if __name__ == "__main__":
@@ -43,9 +43,7 @@ if __name__ == "__main__":
     )
 
     # Load locations after each round
-    with open(
-        ppj("OUT_ANALYSIS", "schelling_{}.pickle".format(model_name)), "rb"
-    ) as in_file:
+    with open(ppj("OUT_ANALYSIS", f"schelling_{model_name}.pickle"), "rb") as in_file:
         locations_by_round = pickle.load(in_file)
 
     plot_locations(locations_by_round, model_name)
