@@ -24,4 +24,4 @@ dependencies:
   - tqdm
   - tox
   - pip:
-    - pre-commit
+    - pre-commit==1.19.0
