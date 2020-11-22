@@ -20,6 +20,19 @@
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black
+    
+    
+Warning
+=======
+
+This cookiecutter is currently unmaintained and development will not be resumed in
+the near future. A similar and maintained template can be found at
+https://github.com/hmgaudecker/econ-project-templates. 
+
+I started developing https://github.com/pytask-dev/pytask which is a replacement for the
+build system used in this template and which will also be used in the
+econ-project-template soon. So, I advise that you check out both projects if you are
+interested.
 
 
 Introduction
